@@ -1,4 +1,4 @@
-module neuron_2_FL(
+module Neuron_2_FL(
     input[959:0] uzorak,
     output reg[15:0] izlaz
 );

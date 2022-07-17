@@ -83,7 +83,7 @@ mnozenje sklop_za_mnozenje7(
     .product(produkt[7])
 );
 mnozenje sklop_za_mnozenje8(
-    .weight(tezine_1[8]),
+    .weight(tezine_1[18]),
     .sample(uzorak[303:288]),
     .product(produkt[8])
 );
@@ -194,10 +194,6 @@ always @(*) begin
         end
     end
 end
-
-
-
-
 
 assign tezine_1[2]=16'b0001_0111_1000_1000;
 assign tezine_1[3]=16'b0001_1111_1000_1101;

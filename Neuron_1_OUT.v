@@ -51,25 +51,25 @@ Prilagodeno_mnozenje sklop_za_mnozenje1(
     .product(produktp[0])
 );
 
-Prilagodeno_mnozenje sklop_za_mnozenje1(
+Prilagodeno_mnozenje sklop_za_mnozenje2(
     .weight(tezine_1_OUT[1]),
     .sample(Prilagodeni_uzorak[1]),
     .product(produktp[1])
 );
 
-Prilagodeno_mnozenje sklop_za_mnozenje1(
+Prilagodeno_mnozenje sklop_za_mnozenje3(
     .weight(tezine_1_OUT[2]),
     .sample(Prilagodeni_uzorak[2]),
     .product(produktp[2])
 );
 
-Prilagodeno_mnozenje sklop_za_mnozenje1(
+Prilagodeno_mnozenje sklop_za_mnozenje4(
     .weight(tezine_1_OUT[3]),
     .sample(Prilagodeni_uzorak[3]),
     .product(produktp[3])
 );
 
-Prilagodeno_mnozenje sklop_za_mnozenje1(
+Prilagodeno_mnozenje sklop_za_mnozenje5(
     .weight(tezine_1_OUT[4]),
     .sample(Prilagodeni_uzorak[4]),
     .product(produktp[4])

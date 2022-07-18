@@ -4,10 +4,10 @@ module Neuron_4_FL(
 );
 
 wire [15:0] tezine_4[59:0];
-wire [15:0] produkt[33:0];
-wire [15:0] produktp[25:0];
-reg [21:0] P_suma[25:1];
-reg [21:0] N_suma[33:1];
+wire [15:0] produkt[25:0];
+wire [15:0] produktp[33:0];
+reg [21:0] P_suma[33:1];
+reg [21:0] N_suma[25:1];
 reg [21:0] Generalna_suma;
 reg predznak;
 wire [15:0] vjerojatnost;

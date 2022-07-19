@@ -1,0 +1,11 @@
+- Dodat biase u neurone prvog sloja
+- Dodat biase u neurone drugog sloja
+- dovršit drugi izlazni neuron
+- napravit modul za upravljat neuronima
+- istestirat svaki neuron pojedinačno
+- istestirat modul koji upravlja njima
+- napravit modul koji bira neuralnu
+- proučit kako se implementira na stvarnoom fpga
+- testirat modul kojim se bira neuralna
+- pripremit testne primjere za demonstraciju (mapirat spektrograme uzoraka u niz bitova)
+- napisat izvještaj

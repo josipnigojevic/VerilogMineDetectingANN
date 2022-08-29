@@ -3,6 +3,6 @@ module Prilagodeno_mnozenje(
     output [18:0]product
 );
     wire[37:0] medurezultat;
-	assign medurezultat = weight[18:1] * sample[18:0];
+	assign medurezultat = weight[18:0] * sample[18:0];
     assign product[18:0] = medurezultat[18:0] + 1'b1;
 endmodule

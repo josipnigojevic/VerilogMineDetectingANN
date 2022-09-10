@@ -25,11 +25,11 @@
 module neuron_1_FL_test();
 reg [239:0] A [3:0];
 wire [15:0] out;
-initial $readmemh("data.mem",A);
+initial $readmemh("data1.mem",A);
 wire [959:0]Mem;
 assign Mem={A[0],A[1],A[2],A[3]};
 
-neuron_1_FL uut(
+Neuron_1_FL uut(
     .uzorak(Mem),
     .izlaz(out)
 );

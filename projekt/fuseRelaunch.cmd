@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/josip/Desktop/PDS_projekt/VerilogMineDetectingANN/projekt/neuron_1_OUT_test_isim_beh.exe" -prj "C:/Users/josip/Desktop/PDS_projekt/VerilogMineDetectingANN/projekt/neuron_1_OUT_test_beh.prj" "work.neuron_1_OUT_test" "work.glbl" 

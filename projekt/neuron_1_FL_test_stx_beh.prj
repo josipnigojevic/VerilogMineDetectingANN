@@ -1,0 +1,5 @@
+verilog isim_temp "../Sigmoid_LUT.v"
+verilog isim_temp "../mnozenje.v"
+verilog isim_temp "../Neuron_1_FL.v"
+verilog isim_temp "../neuron_1_FL_test.v"
+verilog isim_temp "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

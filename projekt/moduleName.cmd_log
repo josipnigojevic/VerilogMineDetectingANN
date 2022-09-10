@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/josip/Desktop/PDS_projekt/VerilogMineDetectingANN/projekt/moduleName.xst" -ofn "C:/Users/josip/Desktop/PDS_projekt/VerilogMineDetectingANN/projekt/moduleName.syr" 

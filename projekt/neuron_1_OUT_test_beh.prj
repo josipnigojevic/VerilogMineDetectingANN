@@ -1,0 +1,5 @@
+verilog work "../Sigmoid_LUT.v"
+verilog work "../Prilagodeno_mnozenje.v"
+verilog work "../Neuron_1_OUT.v"
+verilog work "Neuron_1_OUT_test.v"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

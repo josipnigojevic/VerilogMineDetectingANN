@@ -402,11 +402,11 @@ end
 
 always @(*) begin
     if (P_suma[BROJ_POZITIVNIH_TEZINA-1]>N_suma[BROJ_NEGATIVNIH_TEZINA-1]) begin
-       Generalna_suma = P_suma[BROJ_POZITIVNIH_TEZINA-1] - N_suma[BROJ_NEGATIVNIH_TEZINA-1];
+       Generalna_suma = 22'b00_0010_0110_00100_0100 + P_suma[BROJ_POZITIVNIH_TEZINA-1] - N_suma[BROJ_NEGATIVNIH_TEZINA-1];
        predznak = 1'b0;
     end 
     else begin
-       Generalna_suma = N_suma[BROJ_NEGATIVNIH_TEZINA-1] - P_suma[BROJ_POZITIVNIH_TEZINA-1];
+       Generalna_suma = 22'b00_0010_0110_00100_0100 + N_suma[BROJ_NEGATIVNIH_TEZINA-1] - P_suma[BROJ_POZITIVNIH_TEZINA-1];
        predznak = 1'b1;
     end
 end

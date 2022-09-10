@@ -3,8 +3,8 @@ module Neuron_2_FL(
     output reg[15:0] izlaz
 );
 wire [15:0] tezine_2[59:0];
-wire [15:0] produkt[23:0];
-wire [15:0] produktp[35:0];
+wire [15:0] produkt[35:0];
+wire [15:0] produktp[23:0];
 reg [21:0] P_suma[23:1];
 reg [21:0] N_suma[35:1];
 reg [21:0] Generalna_suma;

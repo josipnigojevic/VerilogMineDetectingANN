@@ -1,0 +1,29 @@
+Command line:
+   Neural_net_test_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  54830
+
+Sat Sep 10 16:34:02 2022
+
+
+ Elaboration Time: 0.078125 sec
+
+ Current Memory Usage: 5196.64 Meg
+
+ Total Signals          : 1315
+ Total Nets             : 21320
+ Total Signal Drivers   : 981
+ Total Blocks           : 327
+ Total Primitive Blocks : 318
+ Total Processes        : 1009
+ Total Traceable Variables  : 79
+ Total Scalar Nets and Variables : 29945
+Total Line Count : 1101
+
+ Total Simulation Time: 0.078125 sec
+
+ Current Memory Usage: 5511.22 Meg
+
+Sat Sep 10 16:34:49 2022
+

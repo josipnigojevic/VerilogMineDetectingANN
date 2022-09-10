@@ -86,11 +86,13 @@ always @(*) begin
             P_suma[j] = P_suma[j-1] + produktp[j];
         end
     end
+	 // pošto imamo samo pozitivne tezine predznaku se moze assignat vrijednost 0
+ predznak=1'b0;
+ Generalna_suma = 22'b0000_0000_0000_0000_0000_00 + P_suma[BROJ_POZITIVNIH_TEZINA-1];
+
 end
 
-// pošto imamo samo pozitivne tezine predznaku se moze assignat vrijednost 0
-assign predznak=1'b0;
-assign Generalna_suma = 22'b0000_0000_0000_0000_0000_00 + P_suma[BROJ_POZITIVNIH_TEZINA-1];
+
 
 Sigmoid_LUT Ananas(
     .suma(Generalna_suma),

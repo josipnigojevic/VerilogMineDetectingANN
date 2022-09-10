@@ -1,0 +1,7 @@
+Exception at PC 0x000000000040446C
+Attemped to read address 0x0000000055FACB98
+Printing stacktrace...
+
+[0]  [0x0x000000000040446c]
+[1]  [0x0x000000000040446c]
+Done

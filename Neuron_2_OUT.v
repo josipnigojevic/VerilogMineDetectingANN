@@ -1,4 +1,4 @@
-module moduleName (
+module Neuron_2_OUT (
     input[79:0] uzorak,
     output reg[15:0] izlaz
 );
@@ -43,7 +43,7 @@ Prilagodeno_mnozenje sklop_za_mnozenje4(
     .product(produktp[3])
 );
 
-P_suma = produktp[0] + produktp[3];
+
 
 
 /*NEGATIVNE TEZINE*/
@@ -67,9 +67,11 @@ Prilagodeno_mnozenje sklop_za_mnozenje5(
     .product(produktp[4])
 );
 
-N_suma = produktp[1] + produktp[2] + produktp[4]; 
+
 
 always @(*) begin
+P_suma = produktp[0] + produktp[3];
+N_suma = produktp[1] + produktp[2] + produktp[4]; 
     if (P_suma>N_suma) begin
        Generalna_suma = 22'b0000_0000_0000_0000_0000_00 + (P_suma - N_suma);
        predznak = 1'b0;

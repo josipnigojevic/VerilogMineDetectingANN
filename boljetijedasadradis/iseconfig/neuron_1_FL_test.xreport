@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2022-09-13T17:51:26</DateModified>
+  <DateModified>2022-09-13T18:47:03</DateModified>
   <ModuleName>neuron_1_FL_test</ModuleName>
-  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
+  <SummaryTimeStamp>2022-09-13T18:10:56</SummaryTimeStamp>
   <SavedFilePath>C:/Users/josip/Desktop/PDS_projekt/VerilogMineDetectingANN/boljetijedasadradis/iseconfig/neuron_1_FL_test.xreport</SavedFilePath>
   <ImplementationReportsDirectory>C:/Users/josip/Desktop/PDS_projekt/VerilogMineDetectingANN/boljetijedasadradis</ImplementationReportsDirectory>
-  <DateInitialized>2022-09-13T16:58:48</DateInitialized>
+  <DateInitialized>2022-09-13T18:47:03</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>

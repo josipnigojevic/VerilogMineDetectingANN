@@ -1,0 +1,29 @@
+Command line:
+   mnozenje_test_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  65298
+
+Tue Sep 13 18:46:18 2022
+
+
+ Elaboration Time: 0.03125 sec
+
+ Current Memory Usage: 5151.47 Meg
+
+ Total Signals          : 18
+ Total Nets             : 92
+ Total Signal Drivers   : 9
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 11
+ Total Traceable Variables  : 20
+ Total Scalar Nets and Variables : 204
+Total Line Count : 19
+
+ Total Simulation Time: 0.03125 sec
+
+ Current Memory Usage: 5151.47 Meg
+
+Tue Sep 13 18:46:24 2022
+

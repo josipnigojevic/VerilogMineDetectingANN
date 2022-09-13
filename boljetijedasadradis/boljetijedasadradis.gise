@@ -41,8 +41,9 @@
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
     <transform xil_pn:end_ts="1662819633" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1662819633">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1662820436" xil_pn:in_ck="-7522106413282277262" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1662820436">
+    <transform xil_pn:end_ts="1663084656" xil_pn:in_ck="-7522106413282277262" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1663084656">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="../Neural_net.v"/>
@@ -75,6 +76,10 @@
     <transform xil_pn:end_ts="1662820439" xil_pn:in_ck="-7522106413282277262" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1662820439">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="../Neural_net.v"/>
       <outfile xil_pn:name="../Neuron_1_FL.v"/>
       <outfile xil_pn:name="../Neuron_1_OUT.v"/>
@@ -93,7 +98,10 @@
     <transform xil_pn:end_ts="1662820441" xil_pn:in_ck="-7522106413282277262" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-3521818789253655083" xil_pn:start_ts="1662820439">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="Neural_net_test_beh.prj"/>
       <outfile xil_pn:name="Neural_net_test_isim_beh.exe"/>
@@ -102,9 +110,10 @@
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1662820441" xil_pn:in_ck="-5047723177759170451" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-2102875637833322376" xil_pn:start_ts="1662820441">
+    <transform xil_pn:end_ts="1663084315" xil_pn:in_ck="-5047723177759170451" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-2102875637833322376" xil_pn:start_ts="1663084315">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="Neural_net_test_isim_beh.wdb"/>

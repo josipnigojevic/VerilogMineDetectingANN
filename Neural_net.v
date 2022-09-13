@@ -1,5 +1,6 @@
 module Neural_net (
     input[959:0] uzorak,
+    output reg indikator_1, indikator_2,
     output reg[15:0] izlaz_1, izlaz_2
 );
 
@@ -52,6 +53,18 @@ Neuron_2_OUT drugi_neuron_izlazni_sloj(
 always@(*)begin
 	izlaz_1=vjerojatnost_2[0];
 	izlaz_2=vjerojatnost_2[1];
+    if (izlaz_1[15]== 1'b1) begin
+	indikator_1 = 1'b1;
+	end
+	else begin
+	indikator_1 = 1'b0;
+	end
+    if (izlaz_2[15]== 1'b1) begin
+	indikator_2 = 1'b1;
+	end
+	else begin
+	indikator_2 = 1'b0;
+	end
 end
 
 endmodule

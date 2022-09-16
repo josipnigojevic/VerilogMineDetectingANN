@@ -7,7 +7,6 @@
    <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
-         <ClosedNode>/Neural_net C:|Users|josip|Desktop|PDS_projekt|VerilogMineDetectingANN|Neural_net.v</ClosedNode>
          <ClosedNode>/Neural_net C:|Users|josip|Desktop|PDS_projekt|VerilogMineDetectingANN|Neural_net.v/cetvrti_neuron_prvi_sloj - Neuron_4_FL</ClosedNode>
          <ClosedNode>/Neural_net C:|Users|josip|Desktop|PDS_projekt|VerilogMineDetectingANN|Neural_net.v/drugi_neuron_izlazni_sloj - Neuron_2_OUT</ClosedNode>
          <ClosedNode>/Neural_net C:|Users|josip|Desktop|PDS_projekt|VerilogMineDetectingANN|Neural_net.v/drugi_neuron_prvi_sloj - Neuron_2_FL</ClosedNode>
@@ -21,7 +20,6 @@
          <ClosedNode>/moduleName C:|Users|josip|Desktop|PDS_projekt|VerilogMineDetectingANN|Neural_net.v/prvi_neuron_izlazni_sloj - Neuron_1_OUT</ClosedNode>
          <ClosedNode>/moduleName C:|Users|josip|Desktop|PDS_projekt|VerilogMineDetectingANN|Neural_net.v/prvi_neuron_prvi_sloj - Neuron_1_FL</ClosedNode>
          <ClosedNode>/moduleName C:|Users|josip|Desktop|PDS_projekt|VerilogMineDetectingANN|Neural_net.v/treci_neuron_prvi_sloj - Neuron_3_FL</ClosedNode>
-         <ClosedNode>/neuron_1_FL_test C:|Users|josip|Desktop|PDS_projekt|VerilogMineDetectingANN|neuron_1_FL_test.v</ClosedNode>
          <ClosedNode>/neuron_1_FL_test C:|Users|josip|Desktop|PDS_projekt|VerilogMineDetectingANN|neuron_1_FL_test.v/uut - Neural_net/cetvrti_neuron_prvi_sloj - Neuron_4_FL</ClosedNode>
          <ClosedNode>/neuron_1_FL_test C:|Users|josip|Desktop|PDS_projekt|VerilogMineDetectingANN|neuron_1_FL_test.v/uut - Neural_net/drugi_neuron_izlazni_sloj - Neuron_2_OUT</ClosedNode>
          <ClosedNode>/neuron_1_FL_test C:|Users|josip|Desktop|PDS_projekt|VerilogMineDetectingANN|neuron_1_FL_test.v/uut - Neural_net/drugi_neuron_prvi_sloj - Neuron_2_FL</ClosedNode>
@@ -34,13 +32,13 @@
          <ClosedNode>/neuron_1_OUT_test C:|Users|josip|Desktop|PDS_projekt|VerilogMineDetectingANN|neuron_1_OUT_test.v/uut - Neuron_2_OUT</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>boljetijedasadradis</SelectedItem>
+         <SelectedItem>data1.mem (C:/Users/josip/Desktop/PDS_projekt/VerilogMineDetectingANN/boljetijedasadradis/data1.mem)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >62</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000122000000020000000000000000000000000200000064ffffffff000000810000000300000002000001220000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000198000000020000000000000000000000000200000064ffffffff000000810000000300000002000001980000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>boljetijedasadradis</CurrentItem>
+      <CurrentItem>data1.mem (C:/Users/josip/Desktop/PDS_projekt/VerilogMineDetectingANN/boljetijedasadradis/data1.mem)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -100,7 +98,6 @@
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
          <ClosedNode>/Neural_net C:|Users|josip|Desktop|PDS_projekt|VerilogMineDetectingANN|Neural_net.v</ClosedNode>
-         <ClosedNode>/Neural_net_test C:|Users|josip|Desktop|PDS_projekt|VerilogMineDetectingANN|boljetijedasadradis|Neural_net_test.v/uut - Neural_net</ClosedNode>
          <ClosedNode>/Neural_net_test C:|Users|josip|Desktop|PDS_projekt|VerilogMineDetectingANN|boljetijedasadradis|Neural_net_test.v/uut - Neural_net/cetvrti_neuron_prvi_sloj - Neuron_4_FL</ClosedNode>
          <ClosedNode>/Neural_net_test C:|Users|josip|Desktop|PDS_projekt|VerilogMineDetectingANN|boljetijedasadradis|Neural_net_test.v/uut - Neural_net/drugi_neuron_izlazni_sloj - Neuron_2_OUT</ClosedNode>
          <ClosedNode>/Neural_net_test C:|Users|josip|Desktop|PDS_projekt|VerilogMineDetectingANN|boljetijedasadradis|Neural_net_test.v/uut - Neural_net/drugi_neuron_prvi_sloj - Neuron_2_FL</ClosedNode>
@@ -125,13 +122,13 @@
          <ClosedNode>/neuron_net_test C:|Users|josip|Desktop|PDS_projekt|VerilogMineDetectingANN|boljetijedasadradis|Neural_net_test.v</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>uut - Sigmoid_LUT (C:/Users/josip/Desktop/PDS_projekt/VerilogMineDetectingANN/Sigmoid_LUT.v)</SelectedItem>
+         <SelectedItem>Neural_net_test (C:/Users/josip/Desktop/PDS_projekt/VerilogMineDetectingANN/boljetijedasadradis/Neural_net_test.v)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >2</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000122000000020000000000000000000000000200000064ffffffff000000810000000300000002000001220000000100000003000000000000000100000003</ViewHeaderState>
-      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>uut - Sigmoid_LUT (C:/Users/josip/Desktop/PDS_projekt/VerilogMineDetectingANN/Sigmoid_LUT.v)</CurrentItem>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001ac000000020000000000000000000000000200000064ffffffff000000810000000300000002000001ac0000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
+      <CurrentItem>Neural_net_test (C:/Users/josip/Desktop/PDS_projekt/VerilogMineDetectingANN/boljetijedasadradis/Neural_net_test.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -139,13 +136,13 @@
          <ClosedNode>Design Utilities</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem/>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="DESUT_VERILOG" guiview="Process" >
       <ClosedNodes>
@@ -174,5 +171,5 @@
       <CurrentItem></CurrentItem>
    </ItemView>
    <SourceProcessView>000000ff0000000000000002000000630000005a01000000050100000002</SourceProcessView>
-   <CurrentView>Behavioral Simulation</CurrentView>
+   <CurrentView>Implementation</CurrentView>
 </Project>

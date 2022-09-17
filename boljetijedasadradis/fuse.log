@@ -1,4 +1,4 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/josip/Desktop/PDS_projekt/VerilogMineDetectingANN/boljetijedasadradis/Neural_net_test_isim_beh.exe -prj C:/Users/josip/Desktop/PDS_projekt/VerilogMineDetectingANN/boljetijedasadradis/Neural_net_test_beh.prj work.Neural_net_test work.glbl 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/josip/Desktop/PDS_projekt/VerilogMineDetectingANN/boljetijedasadradis/controller_test_isim_beh.exe -prj C:/Users/josip/Desktop/PDS_projekt/VerilogMineDetectingANN/boljetijedasadradis/controller_test_beh.prj work.controller_test work.glbl 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 12
 Turning on mult-threading, number of parallel sub-compilation jobs: 24 
@@ -14,7 +14,12 @@ Analyzing Verilog file "C:/Users/josip/Desktop/PDS_projekt/VerilogMineDetectingA
 Analyzing Verilog file "C:/Users/josip/Desktop/PDS_projekt/VerilogMineDetectingANN/boljetijedasadradis/../Neuron_1_OUT.v" into library work
 Analyzing Verilog file "C:/Users/josip/Desktop/PDS_projekt/VerilogMineDetectingANN/boljetijedasadradis/../Neuron_1_FL.v" into library work
 Analyzing Verilog file "C:/Users/josip/Desktop/PDS_projekt/VerilogMineDetectingANN/boljetijedasadradis/../Neural_net.v" into library work
-Analyzing Verilog file "C:/Users/josip/Desktop/PDS_projekt/VerilogMineDetectingANN/boljetijedasadradis/Neural_net_test.v" into library work
+Analyzing Verilog file "C:/Users/josip/Desktop/PDS_projekt/VerilogMineDetectingANN/boljetijedasadradis/Neural_net_controller.v" into library work
+WARNING:HDLCompiler:568 - "C:/Users/josip/Desktop/PDS_projekt/VerilogMineDetectingANN/boljetijedasadradis/Neural_net_controller.v" Line 57: Constant value is truncated to fit in <240> bits.
+WARNING:HDLCompiler:568 - "C:/Users/josip/Desktop/PDS_projekt/VerilogMineDetectingANN/boljetijedasadradis/Neural_net_controller.v" Line 59: Constant value is truncated to fit in <240> bits.
+WARNING:HDLCompiler:568 - "C:/Users/josip/Desktop/PDS_projekt/VerilogMineDetectingANN/boljetijedasadradis/Neural_net_controller.v" Line 61: Constant value is truncated to fit in <240> bits.
+WARNING:HDLCompiler:568 - "C:/Users/josip/Desktop/PDS_projekt/VerilogMineDetectingANN/boljetijedasadradis/Neural_net_controller.v" Line 63: Constant value is truncated to fit in <240> bits.
+Analyzing Verilog file "C:/Users/josip/Desktop/PDS_projekt/VerilogMineDetectingANN/boljetijedasadradis/controller_test.v" into library work
 Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
 Completed static elaboration
@@ -29,11 +34,12 @@ Compiling module Prilagodeno_mnozenje
 Compiling module Neuron_1_OUT
 Compiling module Neuron_2_OUT
 Compiling module Neural_net
-Compiling module Neural_net_test
+Compiling module Neural_net_controller
+Compiling module controller_test
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-WARNING:Simulator - Unable to copy libPortabilityNOSH.dll to the simulation executable directory: boost::filesystem::copy_file: The system cannot find the path specified, "isim\Neural_net_test_isim_beh.exe.sim\libPortability.dll".
-Compiled 13 Verilog Units
-Built simulation executable C:/Users/josip/Desktop/PDS_projekt/VerilogMineDetectingANN/boljetijedasadradis/Neural_net_test_isim_beh.exe
-Fuse Memory Usage: 30016 KB
-Fuse CPU Usage: 514 ms
+WARNING:Simulator - Unable to copy libPortabilityNOSH.dll to the simulation executable directory: boost::filesystem::copy_file: The system cannot find the path specified, "isim\controller_test_isim_beh.exe.sim\libPortability.dll".
+Compiled 14 Verilog Units
+Built simulation executable C:/Users/josip/Desktop/PDS_projekt/VerilogMineDetectingANN/boljetijedasadradis/controller_test_isim_beh.exe
+Fuse Memory Usage: 30608 KB
+Fuse CPU Usage: 546 ms

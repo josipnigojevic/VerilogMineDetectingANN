@@ -23,7 +23,8 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 module controller_test();
-wire sw_1, sw_2, sw_3, sw_4, LED_1, LED_2;
+reg sw_1, sw_2, sw_3, sw_4
+wire LED_1, LED_2;
 
 controller_test uut(
     .switch_1(sw_1),

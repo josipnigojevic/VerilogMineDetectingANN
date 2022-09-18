@@ -157,8 +157,6 @@ Elaborating module <Neuron_1_OUT>.
 Elaborating module <Prilagodeno_mnozenje>.
 
 Elaborating module <Neuron_2_OUT>.
-WARNING:HDLCompiler:1127 - "C:\Users\josip\Desktop\PDS_projekt\VerilogMineDetectingANN\boljetijedasadradis\Neural_net_controller.v" Line 96: Assignment to rezultat ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\josip\Desktop\PDS_projekt\VerilogMineDetectingANN\boljetijedasadradis\Neural_net_controller.v" Line 97: Assignment to rezultat ignored, since the identifier is never used
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -182,8 +180,6 @@ Synthesizing Unit <Neural_net_controller>.
         UZORAK_14 = 4'b1101
         UZORAK_15 = 4'b1110
         UZORAK_16 = 4'b1111
-INFO:Xst:3210 - "C:\Users\josip\Desktop\PDS_projekt\VerilogMineDetectingANN\boljetijedasadradis\Neural_net_controller.v" line 92: Output port <izlaz_1> of the instance <neuralna> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\josip\Desktop\PDS_projekt\VerilogMineDetectingANN\boljetijedasadradis\Neural_net_controller.v" line 92: Output port <izlaz_2> of the instance <neuralna> is unconnected or connected to loadless signal.
     Found 16x960-bit Read Only RAM for signal <test_primjer>
     Summary:
 	inferred   1 RAM(s).
@@ -811,22 +807,22 @@ Top Level Output File Name         : Neural_net_controller.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 22756
+# BELS                             : 22897
 #      GND                         : 1
-#      INV                         : 64
-#      LUT1                        : 710
-#      LUT2                        : 2070
-#      LUT3                        : 2398
-#      LUT4                        : 3177
-#      LUT5                        : 538
-#      LUT6                        : 28
-#      MUXCY                       : 6717
+#      INV                         : 65
+#      LUT1                        : 711
+#      LUT2                        : 2097
+#      LUT3                        : 2420
+#      LUT4                        : 3178
+#      LUT5                        : 539
+#      LUT6                        : 34
+#      MUXCY                       : 6761
 #      MUXF7                       : 2
 #      VCC                         : 1
-#      XORCY                       : 7050
-# IO Buffers                       : 6
+#      XORCY                       : 7088
+# IO Buffers                       : 38
 #      IBUF                        : 4
-#      OBUF                        : 2
+#      OBUF                        : 34
 # DSPs                             : 240
 #      DSP48E1                     : 240
 
@@ -837,19 +833,19 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice LUTs:                 8985  out of  63400    14%  
-    Number used as Logic:              8985  out of  63400    14%  
+ Number of Slice LUTs:                 9044  out of  63400    14%  
+    Number used as Logic:              9044  out of  63400    14%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   8985
-   Number with an unused Flip Flop:    8985  out of   8985   100%  
-   Number with an unused LUT:             0  out of   8985     0%  
-   Number of fully used LUT-FF pairs:     0  out of   8985     0%  
+ Number of LUT Flip Flop pairs used:   9044
+   Number with an unused Flip Flop:    9044  out of   9044   100%  
+   Number with an unused LUT:             0  out of   9044     0%  
+   Number of fully used LUT-FF pairs:     0  out of   9044     0%  
    Number of unique control sets:         0
 
 IO Utilization: 
- Number of IOs:                           6
- Number of bonded IOBs:                   6  out of    210     2%  
+ Number of IOs:                          38
+ Number of bonded IOBs:                  38  out of    210    18%  
 
 Specific Feature Utilization:
  Number of DSP48E1s:                    240  out of    240   100%  
@@ -885,7 +881,7 @@ Speed Grade: -3
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: 26.050ns
+   Maximum combinational path delay: 30.263ns
 
 Timing Details:
 ---------------
@@ -893,13 +889,13 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 34144763846220872 / 1
+  Total number of paths / destination ports: 49459811347547709000 / 22
 -------------------------------------------------------------------------
-Delay:               26.050ns (Levels of Logic = 66)
+Delay:               30.263ns (Levels of Logic = 81)
   Source:            switch_3 (PAD)
-  Destination:       indikator_2 (PAD)
+  Destination:       rezultat_2<9> (PAD)
 
-  Data Path: switch_3 to indikator_2
+  Data Path: switch_3 to rezultat_2<9>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
@@ -928,7 +924,7 @@ Delay:               26.050ns (Levels of Logic = 66)
      LUT3:I2->O            1   0.097   0.295  ADDERTREE_INTERNAL_Madd14514 (ADDERTREE_INTERNAL_Madd14514)
      LUT4:I3->O            1   0.097   0.000  ADDERTREE_INTERNAL_Madd145_lut<0>15 (ADDERTREE_INTERNAL_Madd145_lut<0>15)
      MUXCY:S->O            1   0.353   0.000  ADDERTREE_INTERNAL_Madd145_cy<0>_14 (ADDERTREE_INTERNAL_Madd145_cy<0>15)
-     XORCY:CI->O           2   0.370   0.516  ADDERTREE_INTERNAL_Madd145_xor<0>_15 (ADDERTREE_INTERNAL_Madd_16145)
+     XORCY:CI->O           2   0.370   0.515  ADDERTREE_INTERNAL_Madd145_xor<0>_15 (ADDERTREE_INTERNAL_Madd_16145)
      LUT3:I0->O            1   0.097   0.295  ADDERTREE_INTERNAL_Madd15716 (ADDERTREE_INTERNAL_Madd15717)
      LUT4:I3->O            1   0.097   0.000  ADDERTREE_INTERNAL_Madd157_lut<0>17 (ADDERTREE_INTERNAL_Madd157_lut<0>17)
      MUXCY:S->O            1   0.353   0.000  ADDERTREE_INTERNAL_Madd157_cy<0>_16 (ADDERTREE_INTERNAL_Madd157_cy<0>17)
@@ -960,18 +956,33 @@ Delay:               26.050ns (Levels of Logic = 66)
      MUXCY:CI->O           1   0.023   0.000  neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/Madd_product_cy<12> (neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/Madd_product_cy<12>)
      MUXCY:CI->O           1   0.023   0.000  neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/Madd_product_cy<13> (neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/Madd_product_cy<13>)
      MUXCY:CI->O           1   0.023   0.000  neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/Madd_product_cy<14> (neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/Madd_product_cy<14>)
-     XORCY:CI->O           2   0.370   0.383  neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/Madd_product_xor<15> (neuralna/drugi_neuron_izlazni_sloj/produktp<2><15>)
+     XORCY:CI->O           2   0.370   0.384  neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/Madd_product_xor<15> (neuralna/drugi_neuron_izlazni_sloj/produktp<2><15>)
      LUT3:I1->O            1   0.097   0.295  neuralna/drugi_neuron_izlazni_sloj/Madd_n005015 (neuralna/drugi_neuron_izlazni_sloj/Madd_n005015)
      LUT4:I3->O            1   0.097   0.000  neuralna/drugi_neuron_izlazni_sloj/Madd_n0050_lut<0>16 (neuralna/drugi_neuron_izlazni_sloj/Madd_n0050_lut<0>16)
      MUXCY:S->O            1   0.353   0.000  neuralna/drugi_neuron_izlazni_sloj/Madd_n0050_cy<0>_15 (neuralna/drugi_neuron_izlazni_sloj/Madd_n0050_cy<0>16)
-     XORCY:CI->O           2   0.370   0.561  neuralna/drugi_neuron_izlazni_sloj/Madd_n0050_xor<0>_16 (neuralna/drugi_neuron_izlazni_sloj/n0050<17>)
+     XORCY:CI->O           4   0.370   0.570  neuralna/drugi_neuron_izlazni_sloj/Madd_n0050_xor<0>_16 (neuralna/drugi_neuron_izlazni_sloj/n0050<17>)
      LUT4:I0->O            0   0.097   0.000  neuralna/drugi_neuron_izlazni_sloj/Mcompar_BUS_0003_GND_14_o_LessThan_14_o_lutdi8 (neuralna/drugi_neuron_izlazni_sloj/Mcompar_BUS_0003_GND_14_o_LessThan_14_o_lutdi8)
-     MUXCY:DI->O           1   0.567   0.556  neuralna/drugi_neuron_izlazni_sloj/Mcompar_BUS_0003_GND_14_o_LessThan_14_o_cy<8> (neuralna/drugi_neuron_izlazni_sloj/Mcompar_BUS_0003_GND_14_o_LessThan_14_o_cy<8>)
-     LUT6:I2->O            1   0.097   0.279  neuralna/drugi_neuron_izlazni_sloj/Ananas/vjerojatnost<5>1 (indikator_2_OBUF)
-     OBUF:I->O                 0.000          indikator_2_OBUF (indikator_2)
+     MUXCY:DI->O           2   0.567   0.516  neuralna/drugi_neuron_izlazni_sloj/Mcompar_BUS_0003_GND_14_o_LessThan_14_o_cy<8> (neuralna/drugi_neuron_izlazni_sloj/Mcompar_BUS_0003_GND_14_o_LessThan_14_o_cy<8>)
+     LUT6:I3->O           23   0.097   0.609  neuralna/drugi_neuron_izlazni_sloj/Mcompar_BUS_0003_GND_14_o_LessThan_14_o_cy<9> (neuralna/drugi_neuron_izlazni_sloj/Mcompar_BUS_0003_GND_14_o_LessThan_14_o_cy<9>)
+     LUT3:I0->O            0   0.097   0.000  neuralna/drugi_neuron_izlazni_sloj/Mmux_Generalna_suma_A11 (neuralna/drugi_neuron_izlazni_sloj/Mmux_Generalna_suma_rs_A<0>)
+     MUXCY:DI->O           1   0.337   0.000  neuralna/drugi_neuron_izlazni_sloj/Mmux_Generalna_suma_rs_cy<0> (neuralna/drugi_neuron_izlazni_sloj/Mmux_Generalna_suma_rs_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  neuralna/drugi_neuron_izlazni_sloj/Mmux_Generalna_suma_rs_cy<1> (neuralna/drugi_neuron_izlazni_sloj/Mmux_Generalna_suma_rs_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  neuralna/drugi_neuron_izlazni_sloj/Mmux_Generalna_suma_rs_cy<2> (neuralna/drugi_neuron_izlazni_sloj/Mmux_Generalna_suma_rs_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  neuralna/drugi_neuron_izlazni_sloj/Mmux_Generalna_suma_rs_cy<3> (neuralna/drugi_neuron_izlazni_sloj/Mmux_Generalna_suma_rs_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  neuralna/drugi_neuron_izlazni_sloj/Mmux_Generalna_suma_rs_cy<4> (neuralna/drugi_neuron_izlazni_sloj/Mmux_Generalna_suma_rs_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  neuralna/drugi_neuron_izlazni_sloj/Mmux_Generalna_suma_rs_cy<5> (neuralna/drugi_neuron_izlazni_sloj/Mmux_Generalna_suma_rs_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  neuralna/drugi_neuron_izlazni_sloj/Mmux_Generalna_suma_rs_cy<6> (neuralna/drugi_neuron_izlazni_sloj/Mmux_Generalna_suma_rs_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  neuralna/drugi_neuron_izlazni_sloj/Mmux_Generalna_suma_rs_cy<7> (neuralna/drugi_neuron_izlazni_sloj/Mmux_Generalna_suma_rs_cy<7>)
+     XORCY:CI->O           1   0.370   0.683  neuralna/drugi_neuron_izlazni_sloj/Mmux_Generalna_suma_rs_xor<8> (neuralna/drugi_neuron_izlazni_sloj/Generalna_suma<8>)
+     LUT5:I0->O            1   0.097   0.379  neuralna/drugi_neuron_izlazni_sloj/Ananas/vjerojatnost<0>14 (neuralna/drugi_neuron_izlazni_sloj/Ananas/vjerojatnost<0>13)
+     LUT6:I4->O            1   0.097   0.295  neuralna/drugi_neuron_izlazni_sloj/Ananas/vjerojatnost<0>15 (neuralna/drugi_neuron_izlazni_sloj/Ananas/vjerojatnost<0>14)
+     LUT3:I2->O            1   0.097   0.511  neuralna/drugi_neuron_izlazni_sloj/Ananas/vjerojatnost<0>16_SW0 (N0)
+     LUT6:I3->O            3   0.097   0.305  neuralna/drugi_neuron_izlazni_sloj/Ananas/vjerojatnost<0>16 (neuralna/drugi_neuron_izlazni_sloj/Ananas/vjerojatnost<0>_bdd0)
+     LUT2:I1->O            3   0.097   0.289  neuralna/drugi_neuron_izlazni_sloj/Ananas/vjerojatnost<9>1 (rezultat_2_3_OBUF)
+     OBUF:I->O                 0.000          rezultat_2_9_OBUF (rezultat_2<9>)
     ----------------------------------------
-    Total                     26.050ns (14.436ns logic, 11.614ns route)
-                                       (55.4% logic, 44.6% route)
+    Total                     30.263ns (15.886ns logic, 14.377ns route)
+                                       (52.5% logic, 47.5% route)
 
 =========================================================================
 
@@ -982,13 +993,13 @@ Cross Clock Domains Report:
 
 
 Total REAL time to Xst completion: 84.00 secs
-Total CPU time to Xst completion: 83.86 secs
+Total CPU time to Xst completion: 83.75 secs
  
 --> 
 
-Total memory usage is 4973284 kilobytes
+Total memory usage is 4972088 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    3 (   0 filtered)
-Number of infos    :    4 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
 

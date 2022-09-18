@@ -20,6 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 module Neural_net_controller (
     input switch_1, switch_2, switch_3, switch_4,
+	 output [15:0] rezultat_1, rezultat_2,
     output indikator_1, indikator_2
 );
 
@@ -43,7 +44,6 @@ parameter UZORAK_15 = 4'b1110;
 parameter UZORAK_16 = 4'b1111;
 
 reg [959:0] test_primjer;
-wire [15:0] rezultat [1:0];
 reg [3:0] odabrani_uzorak;
 
 
@@ -93,8 +93,8 @@ end
             .uzorak(test_primjer),
             .indikator_1(indikator_1),
             .indikator_2(indikator_2),
-            .izlaz_1(rezultat[0]),
-            .izlaz_2(rezultat[1])
+            .izlaz_1(rezultat_1),
+            .izlaz_2(rezultat_2)
         );
 
     

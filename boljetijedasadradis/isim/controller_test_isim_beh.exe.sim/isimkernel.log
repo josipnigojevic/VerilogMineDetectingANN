@@ -2,16 +2,16 @@ Command line:
    controller_test_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  60279
+     -socket  51816
 
-Sun Sep 18 15:58:01 2022
+Sun Sep 18 16:17:31 2022
 
 
  Elaboration Time: 0.109375 sec
 
- Current Memory Usage: 5196.65 Meg
+ Current Memory Usage: 5196.68 Meg
 
- Total Signals          : 1322
+ Total Signals          : 1325
  Total Nets             : 21326
  Total Signal Drivers   : 987
  Total Blocks           : 328
@@ -21,9 +21,9 @@ Sun Sep 18 15:58:01 2022
  Total Scalar Nets and Variables : 30025
 Total Line Count : 1203
 
- Total Simulation Time: 0.15625 sec
+ Total Simulation Time: 0.140625 sec
 
- Current Memory Usage: 5196.65 Meg
+ Current Memory Usage: 5511.25 Meg
 
-Sun Sep 18 15:58:20 2022
+Sun Sep 18 16:18:08 2022
 

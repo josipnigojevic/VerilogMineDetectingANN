@@ -25,6 +25,7 @@
 module controller_test();
 reg sw_1, sw_2, sw_3, sw_4;
 wire LED_1, LED_2;
+wire [15:0] rez_1, rez_2;
 
 Neural_net_controller uut(
     .switch_1(sw_1),
@@ -32,7 +33,9 @@ Neural_net_controller uut(
     .switch_3(sw_3),
     .switch_4(sw_4),
     .indikator_1(LED_1),
-    .indikator_2(LED_2)
+    .indikator_2(LED_2),
+	 .rezultat_1(rez_1),
+	 .rezultat_2(rez_2)
 );
 
     initial begin

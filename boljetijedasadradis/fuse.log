@@ -37,5 +37,5 @@ Time Resolution for simulation is 1ps.
 WARNING:Simulator - Unable to copy libPortabilityNOSH.dll to the simulation executable directory: boost::filesystem::copy_file: The system cannot find the path specified, "isim\controller_test_isim_beh.exe.sim\libPortability.dll".
 Compiled 14 Verilog Units
 Built simulation executable C:/Users/josip/Desktop/PDS_projekt/VerilogMineDetectingANN/boljetijedasadradis/controller_test_isim_beh.exe
-Fuse Memory Usage: 30580 KB
-Fuse CPU Usage: 703 ms
+Fuse Memory Usage: 30644 KB
+Fuse CPU Usage: 624 ms

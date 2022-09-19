@@ -74,7 +74,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1663510492" xil_pn:in_ck="-8994463350836238143" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1663510492">
+    <transform xil_pn:end_ts="1663582483" xil_pn:in_ck="-8994463350836238143" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1663582483">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="../Neural_net.v"/>
@@ -108,7 +108,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1663510496" xil_pn:in_ck="-8994463350836238143" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1663510496">
+    <transform xil_pn:end_ts="1663582487" xil_pn:in_ck="-8994463350836238143" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1663582487">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="../Neural_net.v"/>
@@ -130,7 +130,7 @@
       <outfile xil_pn:name="controller_test.v"/>
       <outfile xil_pn:name="mnozenje_test.v"/>
     </transform>
-    <transform xil_pn:end_ts="1663510499" xil_pn:in_ck="-8994463350836238143" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-4928516912385514429" xil_pn:start_ts="1663510496">
+    <transform xil_pn:end_ts="1663582490" xil_pn:in_ck="-8994463350836238143" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-4928516912385514429" xil_pn:start_ts="1663582487">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -142,9 +142,11 @@
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1663510650" xil_pn:in_ck="-4620112911249139511" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="2782255263802096966" xil_pn:start_ts="1663510650">
+    <transform xil_pn:end_ts="1663582490" xil_pn:in_ck="-4620112911249139511" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="2782255263802096966" xil_pn:start_ts="1663582490">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="controller_test_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
@@ -181,6 +183,8 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="Neural_net.ngr"/>
       <outfile xil_pn:name="Neural_net_controller.lso"/>
       <outfile xil_pn:name="Neural_net_controller.ngc"/>

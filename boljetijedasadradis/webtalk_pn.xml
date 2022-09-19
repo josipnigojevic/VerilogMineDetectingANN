@@ -3,7 +3,7 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pn" timeStamp="Mon Sep 19 16:05:38 2022">
+<application name="pn" timeStamp="Mon Sep 19 16:08:52 2022">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="E3C5F5831B054655B5CC8779A820A808" type="project"/>
 <property name="ProjectIteration" value="0" type="project"/>
@@ -11,6 +11,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ProjectCreationTimestamp" value="2022-09-10T15:50:49" type="project"/>
 </section>
 <section name="Project Statistics" visible="true">
+<property name="PROP_Board" value="Spartan-3E Starter Board" type="process"/>
 <property name="PROP_Enable_Message_Filtering" value="false" type="design"/>
 <property name="PROP_FitterReportFormat" value="HTML" type="process"/>
 <property name="PROP_LastAppliedGoal" value="Balanced" type="design"/>
@@ -29,12 +30,12 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_intWorkingDirUsed" value="No" type="design"/>
 <property name="PROP_selectedSimRootSourceNode_behav" value="work.controller_test" type="process"/>
 <property name="PROP_AutoTop" value="false" type="design"/>
-<property name="PROP_DevFamily" value="Artix7" type="design"/>
-<property name="PROP_DevDevice" value="xc7a100t" type="design"/>
-<property name="PROP_DevFamilyPMName" value="artix7" type="design"/>
-<property name="PROP_DevPackage" value="csg324" type="design"/>
+<property name="PROP_DevFamily" value="Spartan3E" type="design"/>
+<property name="PROP_DevDevice" value="xc3s500e" type="design"/>
+<property name="PROP_DevFamilyPMName" value="spartan3e" type="design"/>
+<property name="PROP_DevPackage" value="fg320" type="design"/>
 <property name="PROP_Synthesis_Tool" value="XST (VHDL/Verilog)" type="design"/>
-<property name="PROP_DevSpeed" value="-3" type="design"/>
+<property name="PROP_DevSpeed" value="-4" type="design"/>
 <property name="PROP_PreferredLanguage" value="Verilog" type="design"/>
 <property name="FILE_MEM" value="2" type="source"/>
 <property name="FILE_VERILOG" value="18" type="source"/>

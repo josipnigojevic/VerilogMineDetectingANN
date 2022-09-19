@@ -16,24 +16,19 @@ Total CPU time to Xst completion: 0.09 secs
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
-  2) HDL Parsing
-  3) HDL Elaboration
-  4) HDL Synthesis
-       4.1) HDL Synthesis Report
-  5) Advanced HDL Synthesis
-       5.1) Advanced HDL Synthesis Report
-  6) Low Level Synthesis
-  7) Partition Report
-  8) Design Summary
-       8.1) Primitive and Black Box Usage
-       8.2) Device utilization summary
-       8.3) Partition Resource Summary
-       8.4) Timing Report
-            8.4.1) Clock Information
-            8.4.2) Asynchronous Control Signals Information
-            8.4.3) Timing Summary
-            8.4.4) Timing Details
-            8.4.5) Cross Clock Domains Report
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
 
 
 =========================================================================
@@ -41,12 +36,13 @@ TABLE OF CONTENTS
 =========================================================================
 ---- Source Parameters
 Input File Name                    : "Neural_net_controller.prj"
+Input Format                       : mixed
 Ignore Synthesis Constraint File   : NO
 
 ---- Target Parameters
 Output File Name                   : "Neural_net_controller"
 Output Format                      : NGC
-Target Device                      : xc7a100t-3-csg324
+Target Device                      : xc3s500e-4-fg320
 
 ---- Source Options
 Top Module Name                    : Neural_net_controller
@@ -57,32 +53,35 @@ FSM Style                          : LUT
 RAM Extraction                     : Yes
 RAM Style                          : Auto
 ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
 Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
 ROM Style                          : Auto
+Mux Extraction                     : Yes
 Resource Sharing                   : YES
 Asynchronous To Synchronous        : NO
-Shift Register Minimum Size        : 2
-Use DSP Block                      : Auto
+Multiplier Style                   : Auto
 Automatic Register Balancing       : No
 
 ---- Target Options
-LUT Combining                      : Auto
-Reduce Control Sets                : Auto
 Add IO Buffers                     : YES
-Global Maximum Fanout              : 100000
-Add Generic Clock Buffer(BUFG)     : 32
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
 Register Duplication               : YES
+Slice Packing                      : YES
 Optimize Instantiated Primitives   : NO
-Use Clock Enable                   : Auto
-Use Synchronous Set                : Auto
-Use Synchronous Reset              : Auto
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
 Pack IO Registers into IOBs        : Auto
 Equivalent register Removal        : YES
 
 ---- General Options
 Optimization Goal                  : Speed
 Optimization Effort                : 1
-Power Reduction                    : NO
 Keep Hierarchy                     : No
 Netlist Hierarchy                  : As_Optimized
 RTL Output                         : Yes
@@ -95,7 +94,7 @@ Bus Delimiter                      : <>
 Case Specifier                     : Maintain
 Slice Utilization Ratio            : 100
 BRAM Utilization Ratio             : 100
-DSP48 Utilization Ratio            : 100
+Verilog 2001                       : YES
 Auto BRAM Packing                  : NO
 Slice Utilization Ratio Delta      : 5
 
@@ -103,889 +102,124 @@ Slice Utilization Ratio Delta      : 5
 
 
 =========================================================================
-*                          HDL Parsing                                  *
+*                          HDL Compilation                              *
 =========================================================================
-Analyzing Verilog file "C:\Users\josip\Desktop\VerilogMineDetectingANN\Sigmoid_LUT.v" into library work
-Parsing module <Sigmoid_LUT>.
-Analyzing Verilog file "C:\Users\josip\Desktop\VerilogMineDetectingANN\Prilagodeno_mnozenje.v" into library work
-Parsing module <Prilagodeno_mnozenje>.
-Analyzing Verilog file "C:\Users\josip\Desktop\VerilogMineDetectingANN\mnozenje.v" into library work
-Parsing module <mnozenje>.
-Analyzing Verilog file "C:\Users\josip\Desktop\VerilogMineDetectingANN\Neuron_5_FL.v" into library work
-Parsing module <Neuron_5_FL>.
-Analyzing Verilog file "C:\Users\josip\Desktop\VerilogMineDetectingANN\Neuron_4_FL.v" into library work
-Parsing module <Neuron_4_FL>.
-Analyzing Verilog file "C:\Users\josip\Desktop\VerilogMineDetectingANN\Neuron_3_FL.v" into library work
-Parsing module <Neuron_3_FL>.
-Analyzing Verilog file "C:\Users\josip\Desktop\VerilogMineDetectingANN\Neuron_2_OUT.v" into library work
-Parsing module <Neuron_2_OUT>.
-Analyzing Verilog file "C:\Users\josip\Desktop\VerilogMineDetectingANN\Neuron_2_FL.v" into library work
-Parsing module <Neuron_2_FL>.
-Analyzing Verilog file "C:\Users\josip\Desktop\VerilogMineDetectingANN\Neuron_1_OUT.v" into library work
-Parsing module <Neuron_1_OUT>.
-Analyzing Verilog file "C:\Users\josip\Desktop\VerilogMineDetectingANN\Neuron_1_FL.v" into library work
-Parsing module <Neuron_1_FL>.
-Analyzing Verilog file "C:\Users\josip\Desktop\VerilogMineDetectingANN\Neural_net.v" into library work
-Parsing module <Neural_net>.
-Analyzing Verilog file "C:\Users\josip\Desktop\VerilogMineDetectingANN\boljetijedasadradis\Neural_net_controller.v" into library work
-Parsing module <Neural_net_controller>.
-
-=========================================================================
-*                            HDL Elaboration                            *
-=========================================================================
-
-Elaborating module <Neural_net_controller>.
-
-Elaborating module <Neural_net>.
-
-Elaborating module <Neuron_1_FL>.
-
-Elaborating module <mnozenje>.
-
-Elaborating module <Sigmoid_LUT>.
-
-Elaborating module <Neuron_2_FL>.
-
-Elaborating module <Neuron_3_FL>.
-
-Elaborating module <Neuron_4_FL>.
-
-Elaborating module <Neuron_5_FL>.
-
-Elaborating module <Neuron_1_OUT>.
-
-Elaborating module <Prilagodeno_mnozenje>.
-
-Elaborating module <Neuron_2_OUT>.
-
-=========================================================================
-*                           HDL Synthesis                               *
-=========================================================================
-
-Synthesizing Unit <Neural_net_controller>.
-    Related source file is "C:\Users\josip\Desktop\VerilogMineDetectingANN\boljetijedasadradis\Neural_net_controller.v".
-        UZORAK_1 = 4'b0000
-        UZORAK_2 = 4'b0001
-        UZORAK_3 = 4'b0010
-        UZORAK_4 = 4'b0011
-        UZORAK_5 = 4'b0100
-        UZORAK_6 = 4'b0101
-        UZORAK_7 = 4'b0110
-        UZORAK_8 = 4'b0111
-        UZORAK_9 = 4'b1000
-        UZORAK_10 = 4'b1001
-        UZORAK_11 = 4'b1010
-        UZORAK_12 = 4'b1011
-        UZORAK_13 = 4'b1100
-        UZORAK_14 = 4'b1101
-        UZORAK_15 = 4'b1110
-        UZORAK_16 = 4'b1111
-    Found 16x960-bit Read Only RAM for signal <test_primjer>
-    Summary:
-	inferred   1 RAM(s).
-Unit <Neural_net_controller> synthesized.
-
-Synthesizing Unit <Neural_net>.
-    Related source file is "C:\Users\josip\Desktop\VerilogMineDetectingANN\Neural_net.v".
-    Summary:
-	no macro.
-Unit <Neural_net> synthesized.
-
-Synthesizing Unit <Neuron_1_FL>.
-    Related source file is "C:\Users\josip\Desktop\VerilogMineDetectingANN\Neuron_1_FL.v".
-        BROJ_NEGATIVNIH_TEZINA = 28
-        BROJ_POZITIVNIH_TEZINA = 32
-    Found 22-bit subtractor for signal <GND_3_o_N_suma[27][21]_sub_123_OUT> created at line 405.
-    Found 22-bit subtractor for signal <GND_3_o_P_suma[31][21]_sub_125_OUT> created at line 409.
-    Found 17-bit adder for signal <n0382[16:0]> created at line 190.
-    Found 18-bit adder for signal <n0385[17:0]> created at line 193.
-    Found 19-bit adder for signal <n0388[18:0]> created at line 193.
-    Found 20-bit adder for signal <n0391[19:0]> created at line 193.
-    Found 21-bit adder for signal <n0394[20:0]> created at line 193.
-    Found 17-bit adder for signal <n0463[16:0]> created at line 395.
-    Found 18-bit adder for signal <n0466[17:0]> created at line 398.
-    Found 19-bit adder for signal <n0469[18:0]> created at line 398.
-    Found 20-bit adder for signal <n0472[19:0]> created at line 398.
-    Found 21-bit adder for signal <n0475[20:0]> created at line 398.
-    Found 22-bit adder for signal <GND_3_o_P_suma[31][21]_add_121_OUT> created at line 405.
-    Found 22-bit adder for signal <GND_3_o_N_suma[27][21]_add_123_OUT> created at line 409.
-    Found 22-bit adder for signal <_n0558> created at line 9.
-    Found 22-bit adder for signal <_n0559> created at line 9.
-    Found 22-bit adder for signal <_n0560> created at line 9.
-    Found 22-bit adder for signal <_n0561> created at line 9.
-    Found 22-bit adder for signal <_n0562> created at line 9.
-    Found 22-bit adder for signal <_n0563> created at line 9.
-    Found 22-bit adder for signal <_n0564> created at line 9.
-    Found 22-bit adder for signal <_n0565> created at line 9.
-    Found 22-bit adder for signal <_n0566> created at line 9.
-    Found 22-bit adder for signal <_n0567> created at line 9.
-    Found 22-bit adder for signal <_n0568> created at line 9.
-    Found 22-bit adder for signal <_n0569> created at line 9.
-    Found 22-bit adder for signal <_n0570> created at line 9.
-    Found 22-bit adder for signal <_n0571> created at line 9.
-    Found 22-bit adder for signal <_n0572> created at line 9.
-    Found 22-bit adder for signal <_n0573> created at line 9.
-    Found 22-bit adder for signal <_n0574> created at line 9.
-    Found 22-bit adder for signal <_n0575> created at line 9.
-    Found 22-bit adder for signal <_n0576> created at line 9.
-    Found 22-bit adder for signal <_n0577> created at line 9.
-    Found 22-bit adder for signal <_n0578> created at line 9.
-    Found 22-bit adder for signal <N_suma<27>> created at line 9.
-    Found 22-bit adder for signal <_n0580> created at line 8.
-    Found 22-bit adder for signal <_n0581> created at line 8.
-    Found 22-bit adder for signal <_n0582> created at line 8.
-    Found 22-bit adder for signal <_n0583> created at line 8.
-    Found 22-bit adder for signal <_n0584> created at line 8.
-    Found 22-bit adder for signal <_n0585> created at line 8.
-    Found 22-bit adder for signal <_n0586> created at line 8.
-    Found 22-bit adder for signal <_n0587> created at line 8.
-    Found 22-bit adder for signal <_n0588> created at line 8.
-    Found 22-bit adder for signal <_n0589> created at line 8.
-    Found 22-bit adder for signal <_n0590> created at line 8.
-    Found 22-bit adder for signal <_n0591> created at line 8.
-    Found 22-bit adder for signal <_n0592> created at line 8.
-    Found 22-bit adder for signal <_n0593> created at line 8.
-    Found 22-bit adder for signal <_n0594> created at line 8.
-    Found 22-bit adder for signal <_n0595> created at line 8.
-    Found 22-bit adder for signal <_n0596> created at line 8.
-    Found 22-bit adder for signal <_n0597> created at line 8.
-    Found 22-bit adder for signal <_n0598> created at line 8.
-    Found 22-bit adder for signal <_n0599> created at line 8.
-    Found 22-bit adder for signal <_n0600> created at line 8.
-    Found 22-bit adder for signal <_n0601> created at line 8.
-    Found 22-bit adder for signal <_n0602> created at line 8.
-    Found 22-bit adder for signal <_n0603> created at line 8.
-    Found 22-bit adder for signal <_n0604> created at line 8.
-    Found 22-bit adder for signal <P_suma<31>> created at line 8.
-    Found 22-bit comparator greater for signal <N_suma[27][21]_P_suma[31][21]_LessThan_121_o> created at line 404
-    Summary:
-	inferred  62 Adder/Subtractor(s).
-	inferred   1 Comparator(s).
-	inferred   1 Multiplexer(s).
-Unit <Neuron_1_FL> synthesized.
-
-Synthesizing Unit <mnozenje>.
-    Related source file is "C:\Users\josip\Desktop\VerilogMineDetectingANN\mnozenje.v".
-WARNING:Xst:647 - Input <weight<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 16-bit adder for signal <product> created at line 7.
-    Found 15x16-bit multiplier for signal <medurezultat> created at line 6.
-    Summary:
-	inferred   1 Multiplier(s).
-	inferred   1 Adder/Subtractor(s).
-Unit <mnozenje> synthesized.
-
-Synthesizing Unit <Sigmoid_LUT>.
-    Related source file is "C:\Users\josip\Desktop\VerilogMineDetectingANN\Sigmoid_LUT.v".
-    Found 22-bit comparator greater for signal <suma[21]_PWR_6_o_LessThan_28_o> created at line 21
-    Found 22-bit comparator greater for signal <suma[21]_PWR_6_o_LessThan_29_o> created at line 22
-    Found 22-bit comparator greater for signal <suma[21]_PWR_6_o_LessThan_30_o> created at line 23
-    Found 22-bit comparator greater for signal <suma[21]_GND_6_o_LessThan_31_o> created at line 24
-    Found 22-bit comparator greater for signal <suma[21]_GND_6_o_LessThan_32_o> created at line 25
-    Found 22-bit comparator greater for signal <suma[21]_GND_6_o_LessThan_33_o> created at line 26
-    Found 22-bit comparator greater for signal <suma[21]_GND_6_o_LessThan_34_o> created at line 27
-    Found 22-bit comparator greater for signal <suma[21]_GND_6_o_LessThan_35_o> created at line 28
-    Found 22-bit comparator greater for signal <suma[21]_GND_6_o_LessThan_36_o> created at line 29
-    Found 22-bit comparator greater for signal <suma[21]_GND_6_o_LessThan_37_o> created at line 30
-    Found 22-bit comparator greater for signal <suma[21]_GND_6_o_LessThan_38_o> created at line 31
-    Found 22-bit comparator greater for signal <suma[21]_GND_6_o_LessThan_39_o> created at line 32
-    Found 22-bit comparator greater for signal <suma[21]_GND_6_o_LessThan_40_o> created at line 33
-    Summary:
-	inferred  13 Comparator(s).
-	inferred  25 Multiplexer(s).
-Unit <Sigmoid_LUT> synthesized.
-
-Synthesizing Unit <Neuron_2_FL>.
-    Related source file is "C:\Users\josip\Desktop\VerilogMineDetectingANN\Neuron_2_FL.v".
-        BROJ_NEGATIVNIH_TEZINA = 36
-        BROJ_POZITIVNIH_TEZINA = 24
-    Found 22-bit subtractor for signal <P_suma[23][21]_N_suma[35][21]_sub_122_OUT> created at line 466.
-    Found 22-bit subtractor for signal <N_suma[35][21]_P_suma[23][21]_sub_123_OUT> created at line 470.
-    Found 17-bit adder for signal <n0378[16:0]> created at line 191.
-    Found 18-bit adder for signal <n0381[17:0]> created at line 194.
-    Found 19-bit adder for signal <n0384[18:0]> created at line 194.
-    Found 20-bit adder for signal <n0387[19:0]> created at line 194.
-    Found 21-bit adder for signal <n0390[20:0]> created at line 194.
-    Found 17-bit adder for signal <n0483[16:0]> created at line 456.
-    Found 18-bit adder for signal <n0486[17:0]> created at line 459.
-    Found 19-bit adder for signal <n0489[18:0]> created at line 459.
-    Found 20-bit adder for signal <n0492[19:0]> created at line 459.
-    Found 21-bit adder for signal <n0495[20:0]> created at line 459.
-    Found 22-bit adder for signal <_n0550> created at line 8.
-    Found 22-bit adder for signal <_n0551> created at line 8.
-    Found 22-bit adder for signal <_n0552> created at line 8.
-    Found 22-bit adder for signal <_n0553> created at line 8.
-    Found 22-bit adder for signal <_n0554> created at line 8.
-    Found 22-bit adder for signal <_n0555> created at line 8.
-    Found 22-bit adder for signal <_n0556> created at line 8.
-    Found 22-bit adder for signal <_n0557> created at line 8.
-    Found 22-bit adder for signal <_n0558> created at line 8.
-    Found 22-bit adder for signal <_n0559> created at line 8.
-    Found 22-bit adder for signal <_n0560> created at line 8.
-    Found 22-bit adder for signal <_n0561> created at line 8.
-    Found 22-bit adder for signal <_n0562> created at line 8.
-    Found 22-bit adder for signal <_n0563> created at line 8.
-    Found 22-bit adder for signal <_n0564> created at line 8.
-    Found 22-bit adder for signal <_n0565> created at line 8.
-    Found 22-bit adder for signal <_n0566> created at line 8.
-    Found 22-bit adder for signal <P_suma<23>> created at line 8.
-    Found 22-bit adder for signal <_n0568> created at line 9.
-    Found 22-bit adder for signal <_n0569> created at line 9.
-    Found 22-bit adder for signal <_n0570> created at line 9.
-    Found 22-bit adder for signal <_n0571> created at line 9.
-    Found 22-bit adder for signal <_n0572> created at line 9.
-    Found 22-bit adder for signal <_n0573> created at line 9.
-    Found 22-bit adder for signal <_n0574> created at line 9.
-    Found 22-bit adder for signal <_n0575> created at line 9.
-    Found 22-bit adder for signal <_n0576> created at line 9.
-    Found 22-bit adder for signal <_n0577> created at line 9.
-    Found 22-bit adder for signal <_n0578> created at line 9.
-    Found 22-bit adder for signal <_n0579> created at line 9.
-    Found 22-bit adder for signal <_n0580> created at line 9.
-    Found 22-bit adder for signal <_n0581> created at line 9.
-    Found 22-bit adder for signal <_n0582> created at line 9.
-    Found 22-bit adder for signal <_n0583> created at line 9.
-    Found 22-bit adder for signal <_n0584> created at line 9.
-    Found 22-bit adder for signal <_n0585> created at line 9.
-    Found 22-bit adder for signal <_n0586> created at line 9.
-    Found 22-bit adder for signal <_n0587> created at line 9.
-    Found 22-bit adder for signal <_n0588> created at line 9.
-    Found 22-bit adder for signal <_n0589> created at line 9.
-    Found 22-bit adder for signal <_n0590> created at line 9.
-    Found 22-bit adder for signal <_n0591> created at line 9.
-    Found 22-bit adder for signal <_n0592> created at line 9.
-    Found 22-bit adder for signal <_n0593> created at line 9.
-    Found 22-bit adder for signal <_n0594> created at line 9.
-    Found 22-bit adder for signal <_n0595> created at line 9.
-    Found 22-bit adder for signal <_n0596> created at line 9.
-    Found 22-bit adder for signal <N_suma<35>> created at line 9.
-    Found 22-bit comparator greater for signal <N_suma[35][21]_P_suma[23][21]_LessThan_121_o> created at line 465
-    Summary:
-	inferred  60 Adder/Subtractor(s).
-	inferred   1 Comparator(s).
-	inferred   1 Multiplexer(s).
-Unit <Neuron_2_FL> synthesized.
-
-Synthesizing Unit <Neuron_3_FL>.
-    Related source file is "C:\Users\josip\Desktop\VerilogMineDetectingANN\Neuron_3_FL.v".
-        BROJ_NEGATIVNIH_TEZINA = 32
-        BROJ_POZITIVNIH_TEZINA = 28
-    Found 22-bit subtractor for signal <P_suma[27][21]_N_suma[31][21]_sub_122_OUT> created at line 469.
-    Found 22-bit subtractor for signal <N_suma[31][21]_P_suma[27][21]_sub_123_OUT> created at line 473.
-    Found 17-bit adder for signal <n0376[16:0]> created at line 220.
-    Found 18-bit adder for signal <n0379[17:0]> created at line 223.
-    Found 19-bit adder for signal <n0382[18:0]> created at line 223.
-    Found 20-bit adder for signal <n0385[19:0]> created at line 223.
-    Found 21-bit adder for signal <n0388[20:0]> created at line 223.
-    Found 17-bit adder for signal <n0469[16:0]> created at line 459.
-    Found 18-bit adder for signal <n0472[17:0]> created at line 462.
-    Found 19-bit adder for signal <n0475[18:0]> created at line 462.
-    Found 20-bit adder for signal <n0478[19:0]> created at line 462.
-    Found 21-bit adder for signal <n0481[20:0]> created at line 462.
-    Found 22-bit adder for signal <_n0548> created at line 8.
-    Found 22-bit adder for signal <_n0549> created at line 8.
-    Found 22-bit adder for signal <_n0550> created at line 8.
-    Found 22-bit adder for signal <_n0551> created at line 8.
-    Found 22-bit adder for signal <_n0552> created at line 8.
-    Found 22-bit adder for signal <_n0553> created at line 8.
-    Found 22-bit adder for signal <_n0554> created at line 8.
-    Found 22-bit adder for signal <_n0555> created at line 8.
-    Found 22-bit adder for signal <_n0556> created at line 8.
-    Found 22-bit adder for signal <_n0557> created at line 8.
-    Found 22-bit adder for signal <_n0558> created at line 8.
-    Found 22-bit adder for signal <_n0559> created at line 8.
-    Found 22-bit adder for signal <_n0560> created at line 8.
-    Found 22-bit adder for signal <_n0561> created at line 8.
-    Found 22-bit adder for signal <_n0562> created at line 8.
-    Found 22-bit adder for signal <_n0563> created at line 8.
-    Found 22-bit adder for signal <_n0564> created at line 8.
-    Found 22-bit adder for signal <_n0565> created at line 8.
-    Found 22-bit adder for signal <_n0566> created at line 8.
-    Found 22-bit adder for signal <_n0567> created at line 8.
-    Found 22-bit adder for signal <_n0568> created at line 8.
-    Found 22-bit adder for signal <P_suma<27>> created at line 8.
-    Found 22-bit adder for signal <_n0570> created at line 9.
-    Found 22-bit adder for signal <_n0571> created at line 9.
-    Found 22-bit adder for signal <_n0572> created at line 9.
-    Found 22-bit adder for signal <_n0573> created at line 9.
-    Found 22-bit adder for signal <_n0574> created at line 9.
-    Found 22-bit adder for signal <_n0575> created at line 9.
-    Found 22-bit adder for signal <_n0576> created at line 9.
-    Found 22-bit adder for signal <_n0577> created at line 9.
-    Found 22-bit adder for signal <_n0578> created at line 9.
-    Found 22-bit adder for signal <_n0579> created at line 9.
-    Found 22-bit adder for signal <_n0580> created at line 9.
-    Found 22-bit adder for signal <_n0581> created at line 9.
-    Found 22-bit adder for signal <_n0582> created at line 9.
-    Found 22-bit adder for signal <_n0583> created at line 9.
-    Found 22-bit adder for signal <_n0584> created at line 9.
-    Found 22-bit adder for signal <_n0585> created at line 9.
-    Found 22-bit adder for signal <_n0586> created at line 9.
-    Found 22-bit adder for signal <_n0587> created at line 9.
-    Found 22-bit adder for signal <_n0588> created at line 9.
-    Found 22-bit adder for signal <_n0589> created at line 9.
-    Found 22-bit adder for signal <_n0590> created at line 9.
-    Found 22-bit adder for signal <_n0591> created at line 9.
-    Found 22-bit adder for signal <_n0592> created at line 9.
-    Found 22-bit adder for signal <_n0593> created at line 9.
-    Found 22-bit adder for signal <_n0594> created at line 9.
-    Found 22-bit adder for signal <N_suma<31>> created at line 9.
-    Found 22-bit comparator greater for signal <N_suma[31][21]_P_suma[27][21]_LessThan_121_o> created at line 468
-    Summary:
-	inferred  60 Adder/Subtractor(s).
-	inferred   1 Comparator(s).
-	inferred   1 Multiplexer(s).
-Unit <Neuron_3_FL> synthesized.
-
-Synthesizing Unit <Neuron_4_FL>.
-    Related source file is "C:\Users\josip\Desktop\VerilogMineDetectingANN\Neuron_4_FL.v".
-        BROJ_NEGATIVNIH_TEZINA = 26
-        BROJ_POZITIVNIH_TEZINA = 34
-    Found 22-bit subtractor for signal <P_suma[33][21]_N_suma[25][21]_sub_122_OUT> created at line 465.
-    Found 22-bit subtractor for signal <N_suma[25][21]_P_suma[33][21]_sub_123_OUT> created at line 469.
-    Found 17-bit adder for signal <n0378[16:0]> created at line 260.
-    Found 18-bit adder for signal <n0381[17:0]> created at line 263.
-    Found 19-bit adder for signal <n0384[18:0]> created at line 263.
-    Found 20-bit adder for signal <n0387[19:0]> created at line 263.
-    Found 21-bit adder for signal <n0390[20:0]> created at line 263.
-    Found 17-bit adder for signal <n0477[16:0]> created at line 455.
-    Found 18-bit adder for signal <n0480[17:0]> created at line 458.
-    Found 19-bit adder for signal <n0483[18:0]> created at line 458.
-    Found 20-bit adder for signal <n0486[19:0]> created at line 458.
-    Found 21-bit adder for signal <n0489[20:0]> created at line 458.
-    Found 22-bit adder for signal <_n0550> created at line 10.
-    Found 22-bit adder for signal <_n0551> created at line 10.
-    Found 22-bit adder for signal <_n0552> created at line 10.
-    Found 22-bit adder for signal <_n0553> created at line 10.
-    Found 22-bit adder for signal <_n0554> created at line 10.
-    Found 22-bit adder for signal <_n0555> created at line 10.
-    Found 22-bit adder for signal <_n0556> created at line 10.
-    Found 22-bit adder for signal <_n0557> created at line 10.
-    Found 22-bit adder for signal <_n0558> created at line 10.
-    Found 22-bit adder for signal <_n0559> created at line 10.
-    Found 22-bit adder for signal <_n0560> created at line 10.
-    Found 22-bit adder for signal <_n0561> created at line 10.
-    Found 22-bit adder for signal <_n0562> created at line 10.
-    Found 22-bit adder for signal <_n0563> created at line 10.
-    Found 22-bit adder for signal <_n0564> created at line 10.
-    Found 22-bit adder for signal <_n0565> created at line 10.
-    Found 22-bit adder for signal <_n0566> created at line 10.
-    Found 22-bit adder for signal <_n0567> created at line 10.
-    Found 22-bit adder for signal <_n0568> created at line 10.
-    Found 22-bit adder for signal <N_suma<25>> created at line 10.
-    Found 22-bit adder for signal <_n0570> created at line 9.
-    Found 22-bit adder for signal <_n0571> created at line 9.
-    Found 22-bit adder for signal <_n0572> created at line 9.
-    Found 22-bit adder for signal <_n0573> created at line 9.
-    Found 22-bit adder for signal <_n0574> created at line 9.
-    Found 22-bit adder for signal <_n0575> created at line 9.
-    Found 22-bit adder for signal <_n0576> created at line 9.
-    Found 22-bit adder for signal <_n0577> created at line 9.
-    Found 22-bit adder for signal <_n0578> created at line 9.
-    Found 22-bit adder for signal <_n0579> created at line 9.
-    Found 22-bit adder for signal <_n0580> created at line 9.
-    Found 22-bit adder for signal <_n0581> created at line 9.
-    Found 22-bit adder for signal <_n0582> created at line 9.
-    Found 22-bit adder for signal <_n0583> created at line 9.
-    Found 22-bit adder for signal <_n0584> created at line 9.
-    Found 22-bit adder for signal <_n0585> created at line 9.
-    Found 22-bit adder for signal <_n0586> created at line 9.
-    Found 22-bit adder for signal <_n0587> created at line 9.
-    Found 22-bit adder for signal <_n0588> created at line 9.
-    Found 22-bit adder for signal <_n0589> created at line 9.
-    Found 22-bit adder for signal <_n0590> created at line 9.
-    Found 22-bit adder for signal <_n0591> created at line 9.
-    Found 22-bit adder for signal <_n0592> created at line 9.
-    Found 22-bit adder for signal <_n0593> created at line 9.
-    Found 22-bit adder for signal <_n0594> created at line 9.
-    Found 22-bit adder for signal <_n0595> created at line 9.
-    Found 22-bit adder for signal <_n0596> created at line 9.
-    Found 22-bit adder for signal <P_suma<33>> created at line 9.
-    Found 22-bit comparator greater for signal <N_suma[25][21]_P_suma[33][21]_LessThan_121_o> created at line 464
-    Summary:
-	inferred  60 Adder/Subtractor(s).
-	inferred   1 Comparator(s).
-	inferred   1 Multiplexer(s).
-Unit <Neuron_4_FL> synthesized.
-
-Synthesizing Unit <Neuron_5_FL>.
-    Related source file is "C:\Users\josip\Desktop\VerilogMineDetectingANN\Neuron_5_FL.v".
-        BROJ_NEGATIVNIH_TEZINA = 34
-        BROJ_POZITIVNIH_TEZINA = 26
-    Found 22-bit subtractor for signal <P_suma[25][21]_N_suma[33][21]_sub_122_OUT> created at line 466.
-    Found 22-bit subtractor for signal <N_suma[33][21]_P_suma[25][21]_sub_123_OUT> created at line 470.
-    Found 17-bit adder for signal <n0378[16:0]> created at line 204.
-    Found 18-bit adder for signal <n0381[17:0]> created at line 207.
-    Found 19-bit adder for signal <n0384[18:0]> created at line 207.
-    Found 20-bit adder for signal <n0387[19:0]> created at line 207.
-    Found 21-bit adder for signal <n0390[20:0]> created at line 207.
-    Found 17-bit adder for signal <n0453[16:0]> created at line 456.
-    Found 18-bit adder for signal <n0456[17:0]> created at line 459.
-    Found 19-bit adder for signal <n0459[18:0]> created at line 459.
-    Found 20-bit adder for signal <n0462[19:0]> created at line 459.
-    Found 21-bit adder for signal <n0465[20:0]> created at line 459.
-    Found 22-bit adder for signal <_n0550> created at line 9.
-    Found 22-bit adder for signal <_n0551> created at line 9.
-    Found 22-bit adder for signal <_n0552> created at line 9.
-    Found 22-bit adder for signal <_n0553> created at line 9.
-    Found 22-bit adder for signal <_n0554> created at line 9.
-    Found 22-bit adder for signal <_n0555> created at line 9.
-    Found 22-bit adder for signal <_n0556> created at line 9.
-    Found 22-bit adder for signal <_n0557> created at line 9.
-    Found 22-bit adder for signal <_n0558> created at line 9.
-    Found 22-bit adder for signal <_n0559> created at line 9.
-    Found 22-bit adder for signal <_n0560> created at line 9.
-    Found 22-bit adder for signal <_n0561> created at line 9.
-    Found 22-bit adder for signal <_n0562> created at line 9.
-    Found 22-bit adder for signal <_n0563> created at line 9.
-    Found 22-bit adder for signal <_n0564> created at line 9.
-    Found 22-bit adder for signal <_n0565> created at line 9.
-    Found 22-bit adder for signal <_n0566> created at line 9.
-    Found 22-bit adder for signal <_n0567> created at line 9.
-    Found 22-bit adder for signal <_n0568> created at line 9.
-    Found 22-bit adder for signal <P_suma<25>> created at line 9.
-    Found 22-bit adder for signal <_n0570> created at line 10.
-    Found 22-bit adder for signal <_n0571> created at line 10.
-    Found 22-bit adder for signal <_n0572> created at line 10.
-    Found 22-bit adder for signal <_n0573> created at line 10.
-    Found 22-bit adder for signal <_n0574> created at line 10.
-    Found 22-bit adder for signal <_n0575> created at line 10.
-    Found 22-bit adder for signal <_n0576> created at line 10.
-    Found 22-bit adder for signal <_n0577> created at line 10.
-    Found 22-bit adder for signal <_n0578> created at line 10.
-    Found 22-bit adder for signal <_n0579> created at line 10.
-    Found 22-bit adder for signal <_n0580> created at line 10.
-    Found 22-bit adder for signal <_n0581> created at line 10.
-    Found 22-bit adder for signal <_n0582> created at line 10.
-    Found 22-bit adder for signal <_n0583> created at line 10.
-    Found 22-bit adder for signal <_n0584> created at line 10.
-    Found 22-bit adder for signal <_n0585> created at line 10.
-    Found 22-bit adder for signal <_n0586> created at line 10.
-    Found 22-bit adder for signal <_n0587> created at line 10.
-    Found 22-bit adder for signal <_n0588> created at line 10.
-    Found 22-bit adder for signal <_n0589> created at line 10.
-    Found 22-bit adder for signal <_n0590> created at line 10.
-    Found 22-bit adder for signal <_n0591> created at line 10.
-    Found 22-bit adder for signal <_n0592> created at line 10.
-    Found 22-bit adder for signal <_n0593> created at line 10.
-    Found 22-bit adder for signal <_n0594> created at line 10.
-    Found 22-bit adder for signal <_n0595> created at line 10.
-    Found 22-bit adder for signal <_n0596> created at line 10.
-    Found 22-bit adder for signal <N_suma<33>> created at line 10.
-    Found 22-bit comparator greater for signal <N_suma[33][21]_P_suma[25][21]_LessThan_121_o> created at line 465
-    Summary:
-	inferred  60 Adder/Subtractor(s).
-	inferred   1 Comparator(s).
-	inferred   1 Multiplexer(s).
-Unit <Neuron_5_FL> synthesized.
-
-Synthesizing Unit <Neuron_1_OUT>.
-    Related source file is "C:\Users\josip\Desktop\VerilogMineDetectingANN\Neuron_1_OUT.v".
-        BROJ_POZITIVNIH_TEZINA = 5
-    Found 20-bit adder for signal <n0053[19:0]> created at line 83.
-    Found 21-bit adder for signal <n0056[20:0]> created at line 86.
-    Found 22-bit adder for signal <_n0063> created at line 27.
-    Found 22-bit adder for signal <P_suma<4>> created at line 27.
-    Summary:
-	inferred   4 Adder/Subtractor(s).
-Unit <Neuron_1_OUT> synthesized.
-
-Synthesizing Unit <Prilagodeno_mnozenje>.
-    Related source file is "C:\Users\josip\Desktop\VerilogMineDetectingANN\Prilagodeno_mnozenje.v".
-    Found 19-bit adder for signal <product> created at line 7.
-    Found 19x19-bit multiplier for signal <medurezultat> created at line 6.
-    Summary:
-	inferred   1 Multiplier(s).
-	inferred   1 Adder/Subtractor(s).
-Unit <Prilagodeno_mnozenje> synthesized.
-
-Synthesizing Unit <Neuron_2_OUT>.
-    Related source file is "C:\Users\josip\Desktop\VerilogMineDetectingANN\Neuron_2_OUT.v".
-        BROJ_POZITIVNIH_TEZINA = 2
-        BROJ_NEGATIVNIH_TEZINA = 3
-    Found 22-bit subtractor for signal <GND_14_o_GND_14_o_sub_15_OUT> created at line 76.
-    Found 22-bit subtractor for signal <GND_14_o_GND_14_o_sub_16_OUT> created at line 80.
-    Found 20-bit adder for signal <n0058[19:0]> created at line 73.
-    Found 20-bit adder for signal <n0061[19:0]> created at line 74.
-    Found 21-bit adder for signal <n0050> created at line 74.
-    Found 21-bit comparator greater for signal <BUS_0003_GND_14_o_LessThan_14_o> created at line 75
-    Summary:
-	inferred   4 Adder/Subtractor(s).
-	inferred   1 Comparator(s).
-	inferred   2 Multiplexer(s).
-Unit <Neuron_2_OUT> synthesized.
-
-=========================================================================
-HDL Synthesis Report
-
-Macro Statistics
-# RAMs                                                 : 1
- 16x960-bit single-port Read Only RAM                  : 1
-# Multipliers                                          : 310
- 16x15-bit multiplier                                  : 300
- 19x19-bit multiplier                                  : 10
-# Adders/Subtractors                                   : 620
- 16-bit adder                                          : 300
- 17-bit adder                                          : 10
- 18-bit adder                                          : 10
- 19-bit adder                                          : 20
- 20-bit adder                                          : 13
- 21-bit adder                                          : 12
- 22-bit adder                                          : 244
- 22-bit subtractor                                     : 11
-# Comparators                                          : 97
- 21-bit comparator greater                             : 1
- 22-bit comparator greater                             : 96
-# Multiplexers                                         : 182
- 16-bit 2-to-1 multiplexer                             : 175
- 22-bit 2-to-1 multiplexer                             : 7
-
-=========================================================================
-INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
-
-=========================================================================
-*                       Advanced HDL Synthesis                          *
-=========================================================================
-
-
-Synthesizing (advanced) Unit <Neural_net_controller>.
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_test_primjer> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
-    -----------------------------------------------------------------------
-    | ram_type           | Distributed                         |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 16-word x 960-bit                   |          |
-    |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <(switch_1,switch_2,switch_3,switch_4)> |          |
-    |     diA            | connected to signal <GND>           |          |
-    |     doA            | connected to signal <test_primjer>  |          |
-    -----------------------------------------------------------------------
-Unit <Neural_net_controller> synthesized (advanced).
-
-Synthesizing (advanced) Unit <Neuron_1_FL>.
-	The following adders/subtractors are grouped into adder tree <Madd_N_suma<27>1> :
- 	<Madd_n0382[16:0]> in block <Neuron_1_FL>, 	<Madd_n0385[17:0]> in block <Neuron_1_FL>, 	<Madd_n0388[18:0]> in block <Neuron_1_FL>, 	<Madd_n0391[19:0]> in block <Neuron_1_FL>, 	<Madd_n0394[20:0]> in block <Neuron_1_FL>, 	<Madd__n0558> in block <Neuron_1_FL>, 	<Madd__n0559> in block <Neuron_1_FL>, 	<Madd__n0561> in block <Neuron_1_FL>, 	<Madd__n0562> in block <Neuron_1_FL>, 	<Madd__n0565> in block <Neuron_1_FL>, 	<Madd__n0566> in block <Neuron_1_FL>, 	<Madd__n0567> in block <Neuron_1_FL>, 	<Madd__n0570> in block <Neuron_1_FL>, 	<Madd__n0571> in block <Neuron_1_FL>, 	<Madd__n0573> in block <Neuron_1_FL>, 	<Madd__n0574> in block <Neuron_1_FL>.
-	The following adders/subtractors are grouped into adder tree <Madd_P_suma<31>1> :
- 	<Madd_n0463[16:0]> in block <Neuron_1_FL>, 	<Madd_n0466[17:0]> in block <Neuron_1_FL>, 	<Madd_n0469[18:0]> in block <Neuron_1_FL>, 	<Madd_n0472[19:0]> in block <Neuron_1_FL>, 	<Madd_n0475[20:0]> in block <Neuron_1_FL>, 	<Madd__n0580> in block <Neuron_1_FL>, 	<Madd__n0581> in block <Neuron_1_FL>, 	<Madd__n0583> in block <Neuron_1_FL>, 	<Madd__n0584> in block <Neuron_1_FL>, 	<Madd__n0585> in block <Neuron_1_FL>, 	<Madd__n0589> in block <Neuron_1_FL>, 	<Madd__n0590> in block <Neuron_1_FL>, 	<Madd__n0592> in block <Neuron_1_FL>, 	<Madd__n0593> in block <Neuron_1_FL>, 	<Madd__n0596> in block <Neuron_1_FL>, 	<Madd__n0597> in block <Neuron_1_FL>, 	<Madd__n0599> in block <Neuron_1_FL>, 	<Madd__n0600> in block <Neuron_1_FL>.
-	The following adders/subtractors are grouped into adder tree <Madd__n05781> :
- 	<Madd__n0560> in block <Neuron_1_FL>, 	<Madd__n0563> in block <Neuron_1_FL>, 	<Madd__n0569> in block <Neuron_1_FL>, 	<Madd__n0568> in block <Neuron_1_FL>, 	<Madd__n0572> in block <Neuron_1_FL>, 	<Madd__n0575> in block <Neuron_1_FL>.
-	The following adders/subtractors are grouped into adder tree <Madd__n06041> :
- 	<Madd__n0582> in block <Neuron_1_FL>, 	<Madd__n0587> in block <Neuron_1_FL>, 	<Madd__n0586> in block <Neuron_1_FL>, 	<Madd__n0591> in block <Neuron_1_FL>, 	<Madd__n0594> in block <Neuron_1_FL>, 	<Madd__n0598> in block <Neuron_1_FL>, 	<Madd__n0601> in block <Neuron_1_FL>.
-	The following adders/subtractors are grouped into adder tree <Madd__n06031> :
- 	<Madd__n0595> in block <Neuron_1_FL>, 	<Madd__n0602> in block <Neuron_1_FL>.
-Unit <Neuron_1_FL> synthesized (advanced).
-
-Synthesizing (advanced) Unit <Neuron_1_OUT>.
-	The following adders/subtractors are grouped into adder tree <Madd_P_suma<4>1> :
- 	<Madd_n0053[19:0]> in block <Neuron_1_OUT>, 	<Madd_n0056[20:0]> in block <Neuron_1_OUT>, 	<Madd__n0063> in block <Neuron_1_OUT>.
-Unit <Neuron_1_OUT> synthesized (advanced).
-
-Synthesizing (advanced) Unit <Neuron_2_FL>.
-	The following adders/subtractors are grouped into adder tree <Madd_P_suma<23>1> :
- 	<Madd_n0483[16:0]> in block <Neuron_2_FL>, 	<Madd_n0486[17:0]> in block <Neuron_2_FL>, 	<Madd_n0489[18:0]> in block <Neuron_2_FL>, 	<Madd_n0492[19:0]> in block <Neuron_2_FL>, 	<Madd_n0495[20:0]> in block <Neuron_2_FL>, 	<Madd__n0550> in block <Neuron_2_FL>, 	<Madd__n0551> in block <Neuron_2_FL>, 	<Madd__n0553> in block <Neuron_2_FL>, 	<Madd__n0554> in block <Neuron_2_FL>, 	<Madd__n0557> in block <Neuron_2_FL>, 	<Madd__n0558> in block <Neuron_2_FL>, 	<Madd__n0560> in block <Neuron_2_FL>, 	<Madd__n0561> in block <Neuron_2_FL>, 	<Madd__n0562> in block <Neuron_2_FL>.
-	The following adders/subtractors are grouped into adder tree <Madd_N_suma<35>1> :
- 	<Madd_n0378[16:0]> in block <Neuron_2_FL>, 	<Madd_n0381[17:0]> in block <Neuron_2_FL>, 	<Madd_n0384[18:0]> in block <Neuron_2_FL>, 	<Madd_n0387[19:0]> in block <Neuron_2_FL>, 	<Madd_n0390[20:0]> in block <Neuron_2_FL>, 	<Madd__n0568> in block <Neuron_2_FL>, 	<Madd__n0569> in block <Neuron_2_FL>, 	<Madd__n0570> in block <Neuron_2_FL>, 	<Madd__n0573> in block <Neuron_2_FL>, 	<Madd__n0574> in block <Neuron_2_FL>, 	<Madd__n0576> in block <Neuron_2_FL>, 	<Madd__n0577> in block <Neuron_2_FL>, 	<Madd__n0581> in block <Neuron_2_FL>, 	<Madd__n0582> in block <Neuron_2_FL>, 	<Madd__n0584> in block <Neuron_2_FL>, 	<Madd__n0585> in block <Neuron_2_FL>, 	<Madd__n0588> in block <Neuron_2_FL>, 	<Madd__n0589> in block <Neuron_2_FL>, 	<Madd__n0591> in block <Neuron_2_FL>, 	<Madd__n0592> in block <Neuron_2_FL>.
-	The following adders/subtractors are grouped into adder tree <Madd__n05661> :
- 	<Madd__n0552> in block <Neuron_2_FL>, 	<Madd__n0555> in block <Neuron_2_FL>, 	<Madd__n0559> in block <Neuron_2_FL>, 	<Madd__n0564> in block <Neuron_2_FL>, 	<Madd__n0563> in block <Neuron_2_FL>.
-	The following adders/subtractors are grouped into adder tree <Madd__n05961> :
- 	<Madd__n0572> in block <Neuron_2_FL>, 	<Madd__n0571> in block <Neuron_2_FL>, 	<Madd__n0575> in block <Neuron_2_FL>, 	<Madd__n0578> in block <Neuron_2_FL>, 	<Madd__n0583> in block <Neuron_2_FL>, 	<Madd__n0586> in block <Neuron_2_FL>, 	<Madd__n0590> in block <Neuron_2_FL>, 	<Madd__n0593> in block <Neuron_2_FL>.
-	The following adders/subtractors are grouped into adder tree <Madd__n05951> :
- 	<Madd__n0587> in block <Neuron_2_FL>, 	<Madd__n0594> in block <Neuron_2_FL>.
-Unit <Neuron_2_FL> synthesized (advanced).
-
-Synthesizing (advanced) Unit <Neuron_3_FL>.
-	The following adders/subtractors are grouped into adder tree <Madd_P_suma<27>1> :
- 	<Madd_n0469[16:0]> in block <Neuron_3_FL>, 	<Madd_n0472[17:0]> in block <Neuron_3_FL>, 	<Madd_n0475[18:0]> in block <Neuron_3_FL>, 	<Madd_n0478[19:0]> in block <Neuron_3_FL>, 	<Madd_n0481[20:0]> in block <Neuron_3_FL>, 	<Madd__n0548> in block <Neuron_3_FL>, 	<Madd__n0549> in block <Neuron_3_FL>, 	<Madd__n0551> in block <Neuron_3_FL>, 	<Madd__n0552> in block <Neuron_3_FL>, 	<Madd__n0555> in block <Neuron_3_FL>, 	<Madd__n0556> in block <Neuron_3_FL>, 	<Madd__n0557> in block <Neuron_3_FL>, 	<Madd__n0560> in block <Neuron_3_FL>, 	<Madd__n0561> in block <Neuron_3_FL>, 	<Madd__n0563> in block <Neuron_3_FL>, 	<Madd__n0564> in block <Neuron_3_FL>.
-	The following adders/subtractors are grouped into adder tree <Madd_N_suma<31>1> :
- 	<Madd_n0376[16:0]> in block <Neuron_3_FL>, 	<Madd_n0379[17:0]> in block <Neuron_3_FL>, 	<Madd_n0382[18:0]> in block <Neuron_3_FL>, 	<Madd_n0385[19:0]> in block <Neuron_3_FL>, 	<Madd_n0388[20:0]> in block <Neuron_3_FL>, 	<Madd__n0570> in block <Neuron_3_FL>, 	<Madd__n0571> in block <Neuron_3_FL>, 	<Madd__n0573> in block <Neuron_3_FL>, 	<Madd__n0574> in block <Neuron_3_FL>, 	<Madd__n0575> in block <Neuron_3_FL>, 	<Madd__n0579> in block <Neuron_3_FL>, 	<Madd__n0580> in block <Neuron_3_FL>, 	<Madd__n0582> in block <Neuron_3_FL>, 	<Madd__n0583> in block <Neuron_3_FL>, 	<Madd__n0586> in block <Neuron_3_FL>, 	<Madd__n0587> in block <Neuron_3_FL>, 	<Madd__n0589> in block <Neuron_3_FL>, 	<Madd__n0590> in block <Neuron_3_FL>.
-	The following adders/subtractors are grouped into adder tree <Madd__n05681> :
- 	<Madd__n0550> in block <Neuron_3_FL>, 	<Madd__n0553> in block <Neuron_3_FL>, 	<Madd__n0559> in block <Neuron_3_FL>, 	<Madd__n0558> in block <Neuron_3_FL>, 	<Madd__n0562> in block <Neuron_3_FL>, 	<Madd__n0565> in block <Neuron_3_FL>.
-	The following adders/subtractors are grouped into adder tree <Madd__n05941> :
- 	<Madd__n0572> in block <Neuron_3_FL>, 	<Madd__n0577> in block <Neuron_3_FL>, 	<Madd__n0576> in block <Neuron_3_FL>, 	<Madd__n0581> in block <Neuron_3_FL>, 	<Madd__n0584> in block <Neuron_3_FL>, 	<Madd__n0588> in block <Neuron_3_FL>, 	<Madd__n0591> in block <Neuron_3_FL>.
-	The following adders/subtractors are grouped into adder tree <Madd__n05931> :
- 	<Madd__n0585> in block <Neuron_3_FL>, 	<Madd__n0592> in block <Neuron_3_FL>.
-Unit <Neuron_3_FL> synthesized (advanced).
-
-Synthesizing (advanced) Unit <Neuron_4_FL>.
-	The following adders/subtractors are grouped into adder tree <Madd_P_suma<33>1> :
- 	<Madd_n0378[16:0]> in block <Neuron_4_FL>, 	<Madd_n0381[17:0]> in block <Neuron_4_FL>, 	<Madd_n0384[18:0]> in block <Neuron_4_FL>, 	<Madd_n0387[19:0]> in block <Neuron_4_FL>, 	<Madd_n0390[20:0]> in block <Neuron_4_FL>, 	<Madd__n0570> in block <Neuron_4_FL>, 	<Madd__n0571> in block <Neuron_4_FL>, 	<Madd__n0573> in block <Neuron_4_FL>, 	<Madd__n0574> in block <Neuron_4_FL>, 	<Madd__n0576> in block <Neuron_4_FL>, 	<Madd__n0577> in block <Neuron_4_FL>, 	<Madd__n0581> in block <Neuron_4_FL>, 	<Madd__n0582> in block <Neuron_4_FL>, 	<Madd__n0584> in block <Neuron_4_FL>, 	<Madd__n0585> in block <Neuron_4_FL>, 	<Madd__n0588> in block <Neuron_4_FL>, 	<Madd__n0589> in block <Neuron_4_FL>, 	<Madd__n0591> in block <Neuron_4_FL>, 	<Madd__n0592> in block <Neuron_4_FL>.
-	The following adders/subtractors are grouped into adder tree <Madd_N_suma<25>1> :
- 	<Madd_n0477[16:0]> in block <Neuron_4_FL>, 	<Madd_n0480[17:0]> in block <Neuron_4_FL>, 	<Madd_n0483[18:0]> in block <Neuron_4_FL>, 	<Madd_n0486[19:0]> in block <Neuron_4_FL>, 	<Madd_n0489[20:0]> in block <Neuron_4_FL>, 	<Madd__n0550> in block <Neuron_4_FL>, 	<Madd__n0551> in block <Neuron_4_FL>, 	<Madd__n0553> in block <Neuron_4_FL>, 	<Madd__n0554> in block <Neuron_4_FL>, 	<Madd__n0557> in block <Neuron_4_FL>, 	<Madd__n0558> in block <Neuron_4_FL>, 	<Madd__n0560> in block <Neuron_4_FL>, 	<Madd__n0561> in block <Neuron_4_FL>, 	<Madd__n0563> in block <Neuron_4_FL>, 	<Madd__n0564> in block <Neuron_4_FL>.
-	The following adders/subtractors are grouped into adder tree <Madd__n05961> :
- 	<Madd__n0572> in block <Neuron_4_FL>, 	<Madd__n0575> in block <Neuron_4_FL>, 	<Madd__n0578> in block <Neuron_4_FL>, 	<Madd__n0583> in block <Neuron_4_FL>, 	<Madd__n0586> in block <Neuron_4_FL>, 	<Madd__n0590> in block <Neuron_4_FL>, 	<Madd__n0593> in block <Neuron_4_FL>.
-	The following adders/subtractors are grouped into adder tree <Madd__n05681> :
- 	<Madd__n0552> in block <Neuron_4_FL>, 	<Madd__n0555> in block <Neuron_4_FL>, 	<Madd__n0559> in block <Neuron_4_FL>, 	<Madd__n0562> in block <Neuron_4_FL>, 	<Madd__n0565> in block <Neuron_4_FL>.
-	The following adders/subtractors are grouped into adder tree <Madd__n05951> :
- 	<Madd__n0587> in block <Neuron_4_FL>, 	<Madd__n0594> in block <Neuron_4_FL>.
-Unit <Neuron_4_FL> synthesized (advanced).
-
-Synthesizing (advanced) Unit <Neuron_5_FL>.
-	The following adders/subtractors are grouped into adder tree <Madd_P_suma<25>1> :
- 	<Madd_n0378[16:0]> in block <Neuron_5_FL>, 	<Madd_n0381[17:0]> in block <Neuron_5_FL>, 	<Madd_n0384[18:0]> in block <Neuron_5_FL>, 	<Madd_n0387[19:0]> in block <Neuron_5_FL>, 	<Madd_n0390[20:0]> in block <Neuron_5_FL>, 	<Madd__n0550> in block <Neuron_5_FL>, 	<Madd__n0551> in block <Neuron_5_FL>, 	<Madd__n0553> in block <Neuron_5_FL>, 	<Madd__n0554> in block <Neuron_5_FL>, 	<Madd__n0557> in block <Neuron_5_FL>, 	<Madd__n0558> in block <Neuron_5_FL>, 	<Madd__n0560> in block <Neuron_5_FL>, 	<Madd__n0561> in block <Neuron_5_FL>, 	<Madd__n0563> in block <Neuron_5_FL>, 	<Madd__n0564> in block <Neuron_5_FL>.
-	The following adders/subtractors are grouped into adder tree <Madd_N_suma<33>1> :
- 	<Madd_n0453[16:0]> in block <Neuron_5_FL>, 	<Madd_n0456[17:0]> in block <Neuron_5_FL>, 	<Madd_n0459[18:0]> in block <Neuron_5_FL>, 	<Madd_n0462[19:0]> in block <Neuron_5_FL>, 	<Madd_n0465[20:0]> in block <Neuron_5_FL>, 	<Madd__n0570> in block <Neuron_5_FL>, 	<Madd__n0571> in block <Neuron_5_FL>, 	<Madd__n0573> in block <Neuron_5_FL>, 	<Madd__n0574> in block <Neuron_5_FL>, 	<Madd__n0576> in block <Neuron_5_FL>, 	<Madd__n0577> in block <Neuron_5_FL>, 	<Madd__n0581> in block <Neuron_5_FL>, 	<Madd__n0582> in block <Neuron_5_FL>, 	<Madd__n0584> in block <Neuron_5_FL>, 	<Madd__n0585> in block <Neuron_5_FL>, 	<Madd__n0588> in block <Neuron_5_FL>, 	<Madd__n0589> in block <Neuron_5_FL>, 	<Madd__n0591> in block <Neuron_5_FL>, 	<Madd__n0592> in block <Neuron_5_FL>.
-	The following adders/subtractors are grouped into adder tree <Madd__n05681> :
- 	<Madd__n0552> in block <Neuron_5_FL>, 	<Madd__n0555> in block <Neuron_5_FL>, 	<Madd__n0559> in block <Neuron_5_FL>, 	<Madd__n0562> in block <Neuron_5_FL>, 	<Madd__n0565> in block <Neuron_5_FL>.
-	The following adders/subtractors are grouped into adder tree <Madd__n05961> :
- 	<Madd__n0572> in block <Neuron_5_FL>, 	<Madd__n0575> in block <Neuron_5_FL>, 	<Madd__n0578> in block <Neuron_5_FL>, 	<Madd__n0583> in block <Neuron_5_FL>, 	<Madd__n0586> in block <Neuron_5_FL>, 	<Madd__n0590> in block <Neuron_5_FL>, 	<Madd__n0593> in block <Neuron_5_FL>.
-	The following adders/subtractors are grouped into adder tree <Madd__n05951> :
- 	<Madd__n0587> in block <Neuron_5_FL>, 	<Madd__n0594> in block <Neuron_5_FL>.
-Unit <Neuron_5_FL> synthesized (advanced).
-
-Synthesizing (advanced) Unit <mnozenje>.
-	Multiplier <Mmult_medurezultat> in block <mnozenje> and adder/subtractor <Madd_product> in block <mnozenje> are combined into a MAC<Maddsub_medurezultat>.
-Unit <mnozenje> synthesized (advanced).
-
-=========================================================================
-Advanced HDL Synthesis Report
-
-Macro Statistics
-# RAMs                                                 : 1
- 16x960-bit single-port distributed Read Only RAM      : 1
-# MACs                                                 : 300
- 16x15-to-16-bit MAC                                   : 300
-# Multipliers                                          : 10
- 19x19-bit multiplier                                  : 10
-# Adders/Subtractors                                   : 26
- 19-bit adder                                          : 10
- 20-bit adder                                          : 2
- 21-bit adder                                          : 1
- 22-bit adder                                          : 2
- 22-bit subtractor                                     : 11
-# Adder Trees                                          : 11
- 22-bit / 24-inputs adder tree                         : 1
- 22-bit / 26-inputs adder tree                         : 2
- 22-bit / 28-inputs adder tree                         : 2
- 22-bit / 32-inputs adder tree                         : 2
- 22-bit / 34-inputs adder tree                         : 2
- 22-bit / 36-inputs adder tree                         : 1
- 22-bit / 5-inputs adder tree                          : 1
-# Comparators                                          : 97
- 21-bit comparator greater                             : 1
- 22-bit comparator greater                             : 96
-# Multiplexers                                         : 182
- 16-bit 2-to-1 multiplexer                             : 175
- 22-bit 2-to-1 multiplexer                             : 7
-
-=========================================================================
-
-=========================================================================
-*                         Low Level Synthesis                           *
-=========================================================================
-
-Optimizing unit <Neural_net_controller> ...
-
-Optimizing unit <Sigmoid_LUT> ...
-
-Mapping all equations...
-Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block Neural_net_controller, actual ratio is 20.
-
-Final Macro Processing ...
-
-=========================================================================
-Final Register Report
-
-Found no macro
-=========================================================================
-
-=========================================================================
-*                           Partition Report                            *
-=========================================================================
-
-Partition Implementation Status
--------------------------------
-
-  No Partitions were found in this design.
-
--------------------------------
-
-=========================================================================
-*                            Design Summary                             *
-=========================================================================
-
-Top Level Output File Name         : Neural_net_controller.ngc
-
-Primitive and Black Box Usage:
-------------------------------
-# BELS                             : 25195
-#      GND                         : 1
-#      INV                         : 17
-#      LUT1                        : 708
-#      LUT2                        : 2226
-#      LUT3                        : 2109
-#      LUT4                        : 4367
-#      LUT5                        : 957
-#      LUT6                        : 248
-#      MUXCY                       : 7080
-#      MUXF7                       : 2
-#      VCC                         : 1
-#      XORCY                       : 7479
-# IO Buffers                       : 6
-#      IBUF                        : 4
-#      OBUF                        : 2
-# DSPs                             : 240
-#      DSP48E1                     : 240
-
-Device utilization summary:
----------------------------
-
-Selected Device : 7a100tcsg324-3 
-
-
-Slice Logic Utilization: 
- Number of Slice LUTs:                10632  out of  63400    16%  
-    Number used as Logic:             10632  out of  63400    16%  
-
-Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:  10632
-   Number with an unused Flip Flop:   10632  out of  10632   100%  
-   Number with an unused LUT:             0  out of  10632     0%  
-   Number of fully used LUT-FF pairs:     0  out of  10632     0%  
-   Number of unique control sets:         0
-
-IO Utilization: 
- Number of IOs:                           6
- Number of bonded IOBs:                   6  out of    210     2%  
-
-Specific Feature Utilization:
- Number of DSP48E1s:                    240  out of    240   100%  
-
----------------------------
-Partition Resource Summary:
----------------------------
-
-  No Partitions were found in this design.
-
----------------------------
-
-
-=========================================================================
-Timing Report
-
-NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
-      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
-      GENERATED AFTER PLACE-and-ROUTE.
-
-Clock Information:
-------------------
-No clock signals found in this design
-
-Asynchronous Control Signals Information:
-----------------------------------------
-No asynchronous control signals found in this design
-
-Timing Summary:
----------------
-Speed Grade: -3
-
-   Minimum period: No path found
-   Minimum input arrival time before clock: No path found
-   Maximum output required time after clock: No path found
-   Maximum combinational path delay: 26.360ns
-
-Timing Details:
----------------
-All values displayed in nanoseconds (ns)
-
-=========================================================================
-Timing constraint: Default path analysis
-  Total number of paths / destination ports: 50219769925724168 / 1
--------------------------------------------------------------------------
-Delay:               26.360ns (Levels of Logic = 67)
-  Source:            switch_3 (PAD)
-  Destination:       indikator_2 (PAD)
-
-  Data Path: switch_3 to indikator_2
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O          3491   0.001   0.781  switch_3_IBUF (switch_3_IBUF)
-     LUT3:I0->O           13   0.097   0.739  Mram_test_primjer12931 (Mram_test_primjer129_bdd1)
-     LUT6:I1->O            1   0.097   0.000  neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd2_lut<3> (neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd2_lut<3>)
-     MUXCY:S->O            1   0.353   0.000  neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd2_cy<3> (neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd2_cy<3>)
-     MUXCY:CI->O           1   0.023   0.000  neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd2_cy<4> (neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd2_cy<4>)
-     MUXCY:CI->O           1   0.023   0.000  neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd2_cy<5> (neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd2_cy<5>)
-     MUXCY:CI->O           1   0.023   0.000  neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd2_cy<6> (neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd2_cy<6>)
-     XORCY:CI->O           1   0.370   0.683  neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd2_xor<7> (neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd_92)
-     LUT5:I0->O            1   0.097   0.000  neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd6_lut<8> (neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd6_lut<8>)
-     MUXCY:S->O            1   0.353   0.000  neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd6_cy<8> (neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd6_cy<8>)
-     XORCY:CI->O           1   0.370   0.683  neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd6_xor<9> (neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd_106)
-     LUT5:I0->O            1   0.097   0.000  neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd7_lut<10> (neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd7_lut<10>)
-     MUXCY:S->O            1   0.353   0.000  neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd7_cy<10> (neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd7_cy<10>)
-     XORCY:CI->O           1   0.370   0.379  neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd7_xor<11> (neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd_1111)
-     LUT2:I0->O            1   0.097   0.000  neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd8_lut<11> (neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd8_lut<11>)
-     MUXCY:S->O            1   0.353   0.000  neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd8_cy<11> (neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd8_cy<11>)
-     XORCY:CI->O           1   0.370   0.295  neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd8_xor<12> (neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_12)
-     LUT1:I0->O            1   0.097   0.000  neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd_cy<12>_rt (neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd_cy<12>_rt)
-     MUXCY:S->O            1   0.353   0.000  neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd_cy<12> (neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd_cy<12>)
-     XORCY:CI->O           1   0.370   0.295  neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd_xor<13> (neuralna/treci_neuron_prvi_sloj/produkt<3><13>)
-     LUT2:I1->O            1   0.097   0.000  ADDERTREE_INTERNAL_Madd144_lut<13> (ADDERTREE_INTERNAL_Madd144_lut<13>)
-     MUXCY:S->O            1   0.353   0.000  ADDERTREE_INTERNAL_Madd144_cy<13> (ADDERTREE_INTERNAL_Madd144_cy<13>)
-     XORCY:CI->O           2   0.370   0.299  ADDERTREE_INTERNAL_Madd144_xor<14> (ADDERTREE_INTERNAL_Madd_14144)
-     LUT3:I2->O            1   0.097   0.295  ADDERTREE_INTERNAL_Madd14514 (ADDERTREE_INTERNAL_Madd14514)
-     LUT4:I3->O            1   0.097   0.000  ADDERTREE_INTERNAL_Madd145_lut<0>15 (ADDERTREE_INTERNAL_Madd145_lut<0>15)
-     MUXCY:S->O            1   0.353   0.000  ADDERTREE_INTERNAL_Madd145_cy<0>_14 (ADDERTREE_INTERNAL_Madd145_cy<0>15)
-     XORCY:CI->O           2   0.370   0.516  ADDERTREE_INTERNAL_Madd145_xor<0>_15 (ADDERTREE_INTERNAL_Madd_16145)
-     LUT3:I0->O            1   0.097   0.295  ADDERTREE_INTERNAL_Madd15716 (ADDERTREE_INTERNAL_Madd15717)
-     LUT4:I3->O            1   0.097   0.000  ADDERTREE_INTERNAL_Madd157_lut<0>17 (ADDERTREE_INTERNAL_Madd157_lut<0>17)
-     MUXCY:S->O            1   0.353   0.000  ADDERTREE_INTERNAL_Madd157_cy<0>_16 (ADDERTREE_INTERNAL_Madd157_cy<0>17)
-     XORCY:CI->O           1   0.370   0.379  ADDERTREE_INTERNAL_Madd157_xor<0>_17 (ADDERTREE_INTERNAL_Madd_18157)
-     LUT2:I0->O            1   0.097   0.000  ADDERTREE_INTERNAL_Madd173_lut<18> (ADDERTREE_INTERNAL_Madd173_lut<18>)
-     MUXCY:S->O            1   0.353   0.000  ADDERTREE_INTERNAL_Madd173_cy<18> (ADDERTREE_INTERNAL_Madd173_cy<18>)
-     XORCY:CI->O           4   0.370   0.570  ADDERTREE_INTERNAL_Madd173_xor<19> (ADDERTREE_INTERNAL_Madd_19173)
-     LUT4:I0->O            0   0.097   0.000  neuralna/treci_neuron_prvi_sloj/Mcompar_N_suma[31][21]_P_suma[27][21]_LessThan_121_o_lutdi9 (neuralna/treci_neuron_prvi_sloj/Mcompar_N_suma[31][21]_P_suma[27][21]_LessThan_121_o_lutdi9)
-     MUXCY:DI->O           5   0.567   0.314  neuralna/treci_neuron_prvi_sloj/Mcompar_N_suma[31][21]_P_suma[27][21]_LessThan_121_o_cy<9> (neuralna/treci_neuron_prvi_sloj/Mcompar_N_suma[31][21]_P_suma[27][21]_LessThan_121_o_cy<9>)
-     LUT5:I4->O           11   0.097   0.729  neuralna/treci_neuron_prvi_sloj/Mcompar_N_suma[31][21]_P_suma[27][21]_LessThan_121_o_cy<10> (neuralna/treci_neuron_prvi_sloj/Mcompar_N_suma[31][21]_P_suma[27][21]_LessThan_121_o_cy<10>)
-     LUT5:I0->O            1   0.097   0.693  neuralna/treci_neuron_prvi_sloj/Ananas/vjerojatnost<0>16 (neuralna/treci_neuron_prvi_sloj/Ananas/vjerojatnost<0>15)
-     LUT6:I0->O            1   0.097   0.511  neuralna/treci_neuron_prvi_sloj/Ananas/vjerojatnost<0>112 (neuralna/treci_neuron_prvi_sloj/Ananas/vjerojatnost<0>111)
-     LUT6:I3->O            3   0.097   0.703  neuralna/treci_neuron_prvi_sloj/Ananas/vjerojatnost<0>113 (neuralna/treci_neuron_prvi_sloj/Ananas/vjerojatnost<0>_bdd0)
-     LUT6:I0->O            4   0.097   0.293  neuralna/treci_neuron_prvi_sloj/Ananas/vjerojatnost<0>2 (neuralna/vjerojatnost<2><0>)
-     DSP48E1:A0->P0        1   2.823   0.279  neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/Mmult_medurezultat (neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/medurezultat<0>)
-     INV:I->O              1   0.113   0.000  neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/Madd_product_lut<0>_INV_0 (neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/Madd_product_lut<0>)
-     MUXCY:S->O            1   0.353   0.000  neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/Madd_product_cy<0> (neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/Madd_product_cy<0>)
-     MUXCY:CI->O           1   0.023   0.000  neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/Madd_product_cy<1> (neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/Madd_product_cy<1>)
-     MUXCY:CI->O           1   0.023   0.000  neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/Madd_product_cy<2> (neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/Madd_product_cy<2>)
-     MUXCY:CI->O           1   0.023   0.000  neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/Madd_product_cy<3> (neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/Madd_product_cy<3>)
-     MUXCY:CI->O           1   0.023   0.000  neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/Madd_product_cy<4> (neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/Madd_product_cy<4>)
-     MUXCY:CI->O           1   0.023   0.000  neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/Madd_product_cy<5> (neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/Madd_product_cy<5>)
-     MUXCY:CI->O           1   0.023   0.000  neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/Madd_product_cy<6> (neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/Madd_product_cy<6>)
-     MUXCY:CI->O           1   0.023   0.000  neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/Madd_product_cy<7> (neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/Madd_product_cy<7>)
-     MUXCY:CI->O           1   0.023   0.000  neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/Madd_product_cy<8> (neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/Madd_product_cy<8>)
-     MUXCY:CI->O           1   0.023   0.000  neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/Madd_product_cy<9> (neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/Madd_product_cy<9>)
-     MUXCY:CI->O           1   0.023   0.000  neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/Madd_product_cy<10> (neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/Madd_product_cy<10>)
-     MUXCY:CI->O           1   0.023   0.000  neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/Madd_product_cy<11> (neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/Madd_product_cy<11>)
-     MUXCY:CI->O           1   0.023   0.000  neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/Madd_product_cy<12> (neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/Madd_product_cy<12>)
-     MUXCY:CI->O           1   0.023   0.000  neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/Madd_product_cy<13> (neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/Madd_product_cy<13>)
-     MUXCY:CI->O           1   0.023   0.000  neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/Madd_product_cy<14> (neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/Madd_product_cy<14>)
-     XORCY:CI->O           2   0.370   0.383  neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/Madd_product_xor<15> (neuralna/drugi_neuron_izlazni_sloj/produktp<2><15>)
-     LUT3:I1->O            1   0.097   0.295  neuralna/drugi_neuron_izlazni_sloj/Madd_n005015 (neuralna/drugi_neuron_izlazni_sloj/Madd_n005015)
-     LUT4:I3->O            1   0.097   0.000  neuralna/drugi_neuron_izlazni_sloj/Madd_n0050_lut<0>16 (neuralna/drugi_neuron_izlazni_sloj/Madd_n0050_lut<0>16)
-     MUXCY:S->O            1   0.353   0.000  neuralna/drugi_neuron_izlazni_sloj/Madd_n0050_cy<0>_15 (neuralna/drugi_neuron_izlazni_sloj/Madd_n0050_cy<0>16)
-     XORCY:CI->O           2   0.370   0.561  neuralna/drugi_neuron_izlazni_sloj/Madd_n0050_xor<0>_16 (neuralna/drugi_neuron_izlazni_sloj/n0050<17>)
-     LUT4:I0->O            0   0.097   0.000  neuralna/drugi_neuron_izlazni_sloj/Mcompar_BUS_0003_GND_14_o_LessThan_14_o_lutdi8 (neuralna/drugi_neuron_izlazni_sloj/Mcompar_BUS_0003_GND_14_o_LessThan_14_o_lutdi8)
-     MUXCY:DI->O           1   0.567   0.556  neuralna/drugi_neuron_izlazni_sloj/Mcompar_BUS_0003_GND_14_o_LessThan_14_o_cy<8> (neuralna/drugi_neuron_izlazni_sloj/Mcompar_BUS_0003_GND_14_o_LessThan_14_o_cy<8>)
-     LUT6:I2->O            1   0.097   0.279  neuralna/drugi_neuron_izlazni_sloj/Ananas/vjerojatnost<5>1 (indikator_2_OBUF)
-     OBUF:I->O                 0.000          indikator_2_OBUF (indikator_2)
-    ----------------------------------------
-    Total                     26.360ns (14.549ns logic, 11.811ns route)
-                                       (55.2% logic, 44.8% route)
-
-=========================================================================
-
-Cross Clock Domains Report:
---------------------------
-
-=========================================================================
-
-
-Total REAL time to Xst completion: 79.00 secs
-Total CPU time to Xst completion: 79.14 secs
+Compiling verilog file "../Sigmoid_LUT.v" in library work
+Compiling verilog file "../Prilagodeno_mnozenje.v" in library work
+Module <Sigmoid_LUT> compiled
+Compiling verilog file "../mnozenje.v" in library work
+Module <Prilagodeno_mnozenje> compiled
+Compiling verilog file "../Neuron_5_FL.v" in library work
+Module <mnozenje> compiled
+Compiling verilog file "../Neuron_4_FL.v" in library work
+Module <Neuron_5_FL> compiled
+Compiling verilog file "../Neuron_3_FL.v" in library work
+Module <Neuron_4_FL> compiled
+Compiling verilog file "../Neuron_2_OUT.v" in library work
+Module <Neuron_3_FL> compiled
+Compiling verilog file "../Neuron_2_FL.v" in library work
+Module <Neuron_2_OUT> compiled
+Compiling verilog file "../Neuron_1_OUT.v" in library work
+Module <Neuron_2_FL> compiled
+Compiling verilog file "../Neuron_1_FL.v" in library work
+Module <Neuron_1_OUT> compiled
+Compiling verilog file "../Neural_net.v" in library work
+Module <Neuron_1_FL> compiled
+Compiling verilog file "Neural_net_controller.v" in library work
+Module <Neural_net> compiled
+Module <Neural_net_controller> compiled
+No errors in compilation
+Analysis of file <"Neural_net_controller.prj"> succeeded.
  
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <Neural_net_controller> in library <work> with parameters.
+	UZORAK_1 = "0000"
+	UZORAK_10 = "1001"
+	UZORAK_11 = "1010"
+	UZORAK_12 = "1011"
+	UZORAK_13 = "1100"
+	UZORAK_14 = "1101"
+	UZORAK_15 = "1110"
+	UZORAK_16 = "1111"
+	UZORAK_2 = "0001"
+	UZORAK_3 = "0010"
+	UZORAK_4 = "0011"
+	UZORAK_5 = "0100"
+	UZORAK_6 = "0101"
+	UZORAK_7 = "0110"
+	UZORAK_8 = "0111"
+	UZORAK_9 = "1000"
+
+Analyzing hierarchy for module <Neural_net> in library <work>.
+
+Analyzing hierarchy for module <Neuron_1_FL> in library <work> with parameters.
+	BROJ_NEGATIVNIH_TEZINA = "00000000000000000000000000011100"
+	BROJ_POZITIVNIH_TEZINA = "00000000000000000000000000100000"
+
+Analyzing hierarchy for module <Neuron_2_FL> in library <work> with parameters.
+	BROJ_NEGATIVNIH_TEZINA = "00000000000000000000000000100100"
+	BROJ_POZITIVNIH_TEZINA = "00000000000000000000000000011000"
+
+Analyzing hierarchy for module <Neuron_3_FL> in library <work> with parameters.
+	BROJ_NEGATIVNIH_TEZINA = "00000000000000000000000000100000"
+	BROJ_POZITIVNIH_TEZINA = "00000000000000000000000000011100"
+
+Analyzing hierarchy for module <Neuron_4_FL> in library <work> with parameters.
+	BROJ_NEGATIVNIH_TEZINA = "00000000000000000000000000011010"
+	BROJ_POZITIVNIH_TEZINA = "00000000000000000000000000100010"
+
+Analyzing hierarchy for module <Neuron_5_FL> in library <work> with parameters.
+	BROJ_NEGATIVNIH_TEZINA = "00000000000000000000000000100010"
+	BROJ_POZITIVNIH_TEZINA = "00000000000000000000000000011010"
+
+Analyzing hierarchy for module <Neuron_1_OUT> in library <work> with parameters.
+	BROJ_POZITIVNIH_TEZINA = "00000000000000000000000000000101"
+
+Analyzing hierarchy for module <Neuron_2_OUT> in library <work> with parameters.
+	BROJ_NEGATIVNIH_TEZINA = "00000000000000000000000000000011"
+	BROJ_POZITIVNIH_TEZINA = "00000000000000000000000000000010"
+
+Analyzing hierarchy for module <mnozenje> in library <work>.
+
+Analyzing hierarchy for module <Sigmoid_LUT> in library <work>.
+
+Analyzing hierarchy for module <Prilagodeno_mnozenje> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <Neural_net_controller>.
+	UZORAK_1 = 4'b0000
+	UZORAK_10 = 4'b1001
+	UZORAK_11 = 4'b1010
+	UZORAK_12 = 4'b1011
+	UZORAK_13 = 4'b1100
+	UZORAK_14 = 4'b1101
+	UZORAK_15 = 4'b1110
+	UZORAK_16 = 4'b1111
+	UZORAK_2 = 4'b0001
+	UZORAK_3 = 4'b0010
+	UZORAK_4 = 4'b0011
+	UZORAK_5 = 4'b0100
+	UZORAK_6 = 4'b0101
+	UZORAK_7 = 4'b0110
+	UZORAK_8 = 4'b0111
+	UZORAK_9 = 4'b1000
+Module <Neural_net_controller> is correct for synthesis.
+ 
+Analyzing module <Neural_net> in library <work>.
+ERROR:Xst:902 - "../Neural_net.v" line 52: Unexpected vjerojatnost_2 event in always block sensitivity list.
+ 
+Found 1 error(s). Aborting synthesis.
 --> 
 
-Total memory usage is 4991128 kilobytes
+Total memory usage is 4497972 kilobytes
 
-Number of errors   :    0 (   0 filtered)
-Number of warnings :    1 (   0 filtered)
-Number of infos    :    2 (   0 filtered)
+Number of errors   :    1 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
 

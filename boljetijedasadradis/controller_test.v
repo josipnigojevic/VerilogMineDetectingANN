@@ -23,7 +23,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 module controller_test();
-reg sw_1, sw_2, sw_3, sw_4;
+reg sw_1, sw_2, sw_3, sw_4,clk;
 wire LED_1, LED_2;
 
 
@@ -32,90 +32,68 @@ Neural_net_controller uut(
     .switch_2(sw_2),
     .switch_3(sw_3),
     .switch_4(sw_4),
+	 .clk(clk),
     .indikator_1(LED_1),
     .indikator_2(LED_2)
 );
 
     initial begin
+	 clk= 0;
     sw_1 = 0;
     sw_2 = 0;
     sw_3 = 0;
     sw_4 = 0;
     #10;
+	 clk = 1;
+	 #10;
+	 clk = 0;
     sw_1 = 0;
     sw_2 = 0;
     sw_3 = 0;
     sw_4 = 1;
     #10;
+	 clk = 1;
+	 #10;
+    clk = 0;
     sw_1 = 0;
     sw_2 = 0;
     sw_3 = 1;
     sw_4 = 0;
     #10;
+	 clk = 1;
+	 #10;
+	 clk=0;
     sw_1 = 0;
     sw_2 = 0;
     sw_3 = 1;
     sw_4 = 1;
     #10;
+	 clk = 1;
+	 #10;
+	 clk=0;
     sw_1 = 0;
     sw_2 = 1;
     sw_3 = 0;
     sw_4 = 0;
     #10;
+	 clk = 1;
+	 #10;
+	 clk=0;
     sw_1 = 0;
     sw_2 = 1;
     sw_3 = 0;
     sw_4 = 1;
     #10;
+	 clk = 1;
+	 #10;
+	 clk=0;
     sw_1 = 0;
     sw_2 = 1;
     sw_3 = 1;
     sw_4 = 0;
     #10;
-    sw_1 = 0;
-    sw_2 = 1;
-    sw_3 = 1;
-    sw_4 = 1;
-    #10;
-    sw_1 = 1;
-    sw_2 = 0;
-    sw_3 = 0;
-    sw_4 = 0;
-    #10;
-    sw_1 = 1;
-    sw_2 = 0;
-    sw_3 = 0;
-    sw_4 = 1;
-    #10;
-    sw_1 = 1;
-    sw_2 = 0;
-    sw_3 = 1;
-    sw_4 = 0;
-    #10;
-    sw_1 = 1;
-    sw_2 = 0;
-    sw_3 = 1;
-    sw_4 = 1;
-    #10;
-    sw_1 = 1;
-    sw_2 = 1;
-    sw_3 = 0;
-    sw_4 = 0;
-    #10;
-    sw_1 = 1;
-    sw_2 = 1;
-    sw_3 = 0;
-    sw_4 = 1;
-    #10;
-    sw_1 = 1;
-    sw_2 = 1;
-    sw_3 = 1;
-    sw_4 = 0;
-    #10;
-    sw_1 = 1;
-    sw_2 = 1;
-    sw_3 = 1;
-    sw_4 = 1;
+	 clk = 1;
+	 #10;
     #10 $stop;
     end
       

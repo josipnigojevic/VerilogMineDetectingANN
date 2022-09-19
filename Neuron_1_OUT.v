@@ -1,5 +1,6 @@
 module Neuron_1_OUT(
     input[79:0] uzorak,
+	 input clk,
     output reg[15:0] izlaz
 );
 
@@ -77,7 +78,7 @@ Prilagodeno_mnozenje sklop_za_mnozenje5(
 
 integer j;
 
-always @(*) begin
+always @(posedge clk) begin
     for ( j = 1 ; j < BROJ_POZITIVNIH_TEZINA ; j = j + 1 ) begin
         if(j == 1) begin
             P_suma[j] = produktp[j] + produktp[j-1];
@@ -99,7 +100,7 @@ Sigmoid_LUT Ananas(
     .predznak(predznak),
     .vjerojatnost(vjerojatnost)
 );
-always@(*)begin
+always@(posedge clk)begin
 	izlaz=vjerojatnost;
 end
 

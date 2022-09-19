@@ -1,5 +1,6 @@
 module Neuron_2_FL(
     input[959:0] uzorak,
+	 input clk,
     output reg[15:0] izlaz
 );
 wire [15:0] tezine_2[59:0];
@@ -185,7 +186,7 @@ mnozenje sklop_za_mnozenje59(
 
 integer i;
 
-always @(*) begin
+always @(posedge clk) begin
     for ( i = 1 ; i < BROJ_NEGATIVNIH_TEZINA ; i = i + 1 ) begin
         if(i == 1) begin
             N_suma[i] = produkt[i] + produkt[i-1];
@@ -450,7 +451,7 @@ mnozenje sklop_za_mnozenje27(
 );
 
 integer j;
-always @(*) begin
+always @(posedge clk) begin
     for ( j = 1 ; j < BROJ_POZITIVNIH_TEZINA ; j = j + 1 ) begin
         if(j == 1) begin
             P_suma[j] = produktp[j] + produktp[j-1];
@@ -461,7 +462,7 @@ always @(*) begin
     end
 end
 
-always @(*) begin
+always @(posedge clk) begin
     if (P_suma[BROJ_POZITIVNIH_TEZINA-1]>N_suma[BROJ_NEGATIVNIH_TEZINA-1]) begin
        Generalna_suma = P_suma[BROJ_POZITIVNIH_TEZINA-1] - N_suma[BROJ_NEGATIVNIH_TEZINA-1];
        predznak = 1'b0;
@@ -477,7 +478,7 @@ Sigmoid_LUT Ananas(
     .predznak(predznak),
     .vjerojatnost(vjerojatnost)
 );
-always@(*)begin
+always@(posedge clk)begin
 	izlaz=vjerojatnost;
 end
 

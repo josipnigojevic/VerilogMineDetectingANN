@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2022-09-19T16:03:29</DateModified>
+  <DateModified>2022-09-19T16:08:22</DateModified>
   <ModuleName>Neural_net_controller</ModuleName>
-  <SummaryTimeStamp>2022-09-18T15:59:55</SummaryTimeStamp>
+  <SummaryTimeStamp>2022-09-19T16:07:00</SummaryTimeStamp>
   <SavedFilePath>C:/Users/josip/Desktop/VerilogMineDetectingANN/boljetijedasadradis/iseconfig/Neural_net_controller.xreport</SavedFilePath>
   <ImplementationReportsDirectory>C:/Users/josip/Desktop/VerilogMineDetectingANN/boljetijedasadradis\</ImplementationReportsDirectory>
   <DateInitialized>2022-09-18T15:51:54</DateInitialized>

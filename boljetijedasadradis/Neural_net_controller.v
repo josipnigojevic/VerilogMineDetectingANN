@@ -19,7 +19,7 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module Neural_net_controller (
-    input switch_1, switch_2, switch_3, switch_4,
+    input switch_1, switch_2, switch_3, switch_4, clk, 
     output indikator_1, indikator_2
 );
 
@@ -47,7 +47,7 @@ reg [3:0] odabrani_uzorak;
 
 
 //nabavit jos podataka 240 hex znamenki
-always @(switch_1, switch_2, switch_3, switch_4) begin
+always @(posedge clk) begin
 
 odabrani_uzorak = {switch_1, switch_2, switch_3, switch_4};
 
@@ -90,6 +90,7 @@ end
 
         Neural_net neuralna(
             .uzorak(test_primjer),
+				.clk(clk),
             .indikator_1(indikator_1),
             .indikator_2(indikator_2)
         );

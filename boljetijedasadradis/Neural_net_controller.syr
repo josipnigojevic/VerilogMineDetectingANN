@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Reading design: Neural_net_controller.prj
 
@@ -105,29 +105,29 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:\Users\josip\Desktop\PDS_projekt\VerilogMineDetectingANN\Sigmoid_LUT.v" into library work
+Analyzing Verilog file "C:\Users\josip\Desktop\VerilogMineDetectingANN\Sigmoid_LUT.v" into library work
 Parsing module <Sigmoid_LUT>.
-Analyzing Verilog file "C:\Users\josip\Desktop\PDS_projekt\VerilogMineDetectingANN\Prilagodeno_mnozenje.v" into library work
+Analyzing Verilog file "C:\Users\josip\Desktop\VerilogMineDetectingANN\Prilagodeno_mnozenje.v" into library work
 Parsing module <Prilagodeno_mnozenje>.
-Analyzing Verilog file "C:\Users\josip\Desktop\PDS_projekt\VerilogMineDetectingANN\mnozenje.v" into library work
+Analyzing Verilog file "C:\Users\josip\Desktop\VerilogMineDetectingANN\mnozenje.v" into library work
 Parsing module <mnozenje>.
-Analyzing Verilog file "C:\Users\josip\Desktop\PDS_projekt\VerilogMineDetectingANN\Neuron_5_FL.v" into library work
+Analyzing Verilog file "C:\Users\josip\Desktop\VerilogMineDetectingANN\Neuron_5_FL.v" into library work
 Parsing module <Neuron_5_FL>.
-Analyzing Verilog file "C:\Users\josip\Desktop\PDS_projekt\VerilogMineDetectingANN\Neuron_4_FL.v" into library work
+Analyzing Verilog file "C:\Users\josip\Desktop\VerilogMineDetectingANN\Neuron_4_FL.v" into library work
 Parsing module <Neuron_4_FL>.
-Analyzing Verilog file "C:\Users\josip\Desktop\PDS_projekt\VerilogMineDetectingANN\Neuron_3_FL.v" into library work
+Analyzing Verilog file "C:\Users\josip\Desktop\VerilogMineDetectingANN\Neuron_3_FL.v" into library work
 Parsing module <Neuron_3_FL>.
-Analyzing Verilog file "C:\Users\josip\Desktop\PDS_projekt\VerilogMineDetectingANN\Neuron_2_OUT.v" into library work
+Analyzing Verilog file "C:\Users\josip\Desktop\VerilogMineDetectingANN\Neuron_2_OUT.v" into library work
 Parsing module <Neuron_2_OUT>.
-Analyzing Verilog file "C:\Users\josip\Desktop\PDS_projekt\VerilogMineDetectingANN\Neuron_2_FL.v" into library work
+Analyzing Verilog file "C:\Users\josip\Desktop\VerilogMineDetectingANN\Neuron_2_FL.v" into library work
 Parsing module <Neuron_2_FL>.
-Analyzing Verilog file "C:\Users\josip\Desktop\PDS_projekt\VerilogMineDetectingANN\Neuron_1_OUT.v" into library work
+Analyzing Verilog file "C:\Users\josip\Desktop\VerilogMineDetectingANN\Neuron_1_OUT.v" into library work
 Parsing module <Neuron_1_OUT>.
-Analyzing Verilog file "C:\Users\josip\Desktop\PDS_projekt\VerilogMineDetectingANN\Neuron_1_FL.v" into library work
+Analyzing Verilog file "C:\Users\josip\Desktop\VerilogMineDetectingANN\Neuron_1_FL.v" into library work
 Parsing module <Neuron_1_FL>.
-Analyzing Verilog file "C:\Users\josip\Desktop\PDS_projekt\VerilogMineDetectingANN\Neural_net.v" into library work
+Analyzing Verilog file "C:\Users\josip\Desktop\VerilogMineDetectingANN\Neural_net.v" into library work
 Parsing module <Neural_net>.
-Analyzing Verilog file "C:\Users\josip\Desktop\PDS_projekt\VerilogMineDetectingANN\boljetijedasadradis\Neural_net_controller.v" into library work
+Analyzing Verilog file "C:\Users\josip\Desktop\VerilogMineDetectingANN\boljetijedasadradis\Neural_net_controller.v" into library work
 Parsing module <Neural_net_controller>.
 
 =========================================================================
@@ -163,7 +163,7 @@ Elaborating module <Neuron_2_OUT>.
 =========================================================================
 
 Synthesizing Unit <Neural_net_controller>.
-    Related source file is "C:\Users\josip\Desktop\PDS_projekt\VerilogMineDetectingANN\boljetijedasadradis\Neural_net_controller.v".
+    Related source file is "C:\Users\josip\Desktop\VerilogMineDetectingANN\boljetijedasadradis\Neural_net_controller.v".
         UZORAK_1 = 4'b0000
         UZORAK_2 = 4'b0001
         UZORAK_3 = 4'b0010
@@ -186,13 +186,13 @@ Synthesizing Unit <Neural_net_controller>.
 Unit <Neural_net_controller> synthesized.
 
 Synthesizing Unit <Neural_net>.
-    Related source file is "C:\Users\josip\Desktop\PDS_projekt\VerilogMineDetectingANN\Neural_net.v".
+    Related source file is "C:\Users\josip\Desktop\VerilogMineDetectingANN\Neural_net.v".
     Summary:
 	no macro.
 Unit <Neural_net> synthesized.
 
 Synthesizing Unit <Neuron_1_FL>.
-    Related source file is "C:\Users\josip\Desktop\PDS_projekt\VerilogMineDetectingANN\Neuron_1_FL.v".
+    Related source file is "C:\Users\josip\Desktop\VerilogMineDetectingANN\Neuron_1_FL.v".
         BROJ_NEGATIVNIH_TEZINA = 28
         BROJ_POZITIVNIH_TEZINA = 32
     Found 22-bit subtractor for signal <GND_3_o_N_suma[27][21]_sub_123_OUT> created at line 405.
@@ -265,7 +265,7 @@ Synthesizing Unit <Neuron_1_FL>.
 Unit <Neuron_1_FL> synthesized.
 
 Synthesizing Unit <mnozenje>.
-    Related source file is "C:\Users\josip\Desktop\PDS_projekt\VerilogMineDetectingANN\mnozenje.v".
+    Related source file is "C:\Users\josip\Desktop\VerilogMineDetectingANN\mnozenje.v".
 WARNING:Xst:647 - Input <weight<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 16-bit adder for signal <product> created at line 7.
     Found 15x16-bit multiplier for signal <medurezultat> created at line 6.
@@ -275,7 +275,7 @@ WARNING:Xst:647 - Input <weight<0:0>> is never used. This port will be preserved
 Unit <mnozenje> synthesized.
 
 Synthesizing Unit <Sigmoid_LUT>.
-    Related source file is "C:\Users\josip\Desktop\PDS_projekt\VerilogMineDetectingANN\Sigmoid_LUT.v".
+    Related source file is "C:\Users\josip\Desktop\VerilogMineDetectingANN\Sigmoid_LUT.v".
     Found 22-bit comparator greater for signal <suma[21]_PWR_6_o_LessThan_28_o> created at line 21
     Found 22-bit comparator greater for signal <suma[21]_PWR_6_o_LessThan_29_o> created at line 22
     Found 22-bit comparator greater for signal <suma[21]_PWR_6_o_LessThan_30_o> created at line 23
@@ -295,7 +295,7 @@ Synthesizing Unit <Sigmoid_LUT>.
 Unit <Sigmoid_LUT> synthesized.
 
 Synthesizing Unit <Neuron_2_FL>.
-    Related source file is "C:\Users\josip\Desktop\PDS_projekt\VerilogMineDetectingANN\Neuron_2_FL.v".
+    Related source file is "C:\Users\josip\Desktop\VerilogMineDetectingANN\Neuron_2_FL.v".
         BROJ_NEGATIVNIH_TEZINA = 36
         BROJ_POZITIVNIH_TEZINA = 24
     Found 22-bit subtractor for signal <P_suma[23][21]_N_suma[35][21]_sub_122_OUT> created at line 466.
@@ -366,7 +366,7 @@ Synthesizing Unit <Neuron_2_FL>.
 Unit <Neuron_2_FL> synthesized.
 
 Synthesizing Unit <Neuron_3_FL>.
-    Related source file is "C:\Users\josip\Desktop\PDS_projekt\VerilogMineDetectingANN\Neuron_3_FL.v".
+    Related source file is "C:\Users\josip\Desktop\VerilogMineDetectingANN\Neuron_3_FL.v".
         BROJ_NEGATIVNIH_TEZINA = 32
         BROJ_POZITIVNIH_TEZINA = 28
     Found 22-bit subtractor for signal <P_suma[27][21]_N_suma[31][21]_sub_122_OUT> created at line 469.
@@ -437,7 +437,7 @@ Synthesizing Unit <Neuron_3_FL>.
 Unit <Neuron_3_FL> synthesized.
 
 Synthesizing Unit <Neuron_4_FL>.
-    Related source file is "C:\Users\josip\Desktop\PDS_projekt\VerilogMineDetectingANN\Neuron_4_FL.v".
+    Related source file is "C:\Users\josip\Desktop\VerilogMineDetectingANN\Neuron_4_FL.v".
         BROJ_NEGATIVNIH_TEZINA = 26
         BROJ_POZITIVNIH_TEZINA = 34
     Found 22-bit subtractor for signal <P_suma[33][21]_N_suma[25][21]_sub_122_OUT> created at line 465.
@@ -508,7 +508,7 @@ Synthesizing Unit <Neuron_4_FL>.
 Unit <Neuron_4_FL> synthesized.
 
 Synthesizing Unit <Neuron_5_FL>.
-    Related source file is "C:\Users\josip\Desktop\PDS_projekt\VerilogMineDetectingANN\Neuron_5_FL.v".
+    Related source file is "C:\Users\josip\Desktop\VerilogMineDetectingANN\Neuron_5_FL.v".
         BROJ_NEGATIVNIH_TEZINA = 34
         BROJ_POZITIVNIH_TEZINA = 26
     Found 22-bit subtractor for signal <P_suma[25][21]_N_suma[33][21]_sub_122_OUT> created at line 466.
@@ -579,7 +579,7 @@ Synthesizing Unit <Neuron_5_FL>.
 Unit <Neuron_5_FL> synthesized.
 
 Synthesizing Unit <Neuron_1_OUT>.
-    Related source file is "C:\Users\josip\Desktop\PDS_projekt\VerilogMineDetectingANN\Neuron_1_OUT.v".
+    Related source file is "C:\Users\josip\Desktop\VerilogMineDetectingANN\Neuron_1_OUT.v".
         BROJ_POZITIVNIH_TEZINA = 5
     Found 20-bit adder for signal <n0053[19:0]> created at line 83.
     Found 21-bit adder for signal <n0056[20:0]> created at line 86.
@@ -590,7 +590,7 @@ Synthesizing Unit <Neuron_1_OUT>.
 Unit <Neuron_1_OUT> synthesized.
 
 Synthesizing Unit <Prilagodeno_mnozenje>.
-    Related source file is "C:\Users\josip\Desktop\PDS_projekt\VerilogMineDetectingANN\Prilagodeno_mnozenje.v".
+    Related source file is "C:\Users\josip\Desktop\VerilogMineDetectingANN\Prilagodeno_mnozenje.v".
     Found 19-bit adder for signal <product> created at line 7.
     Found 19x19-bit multiplier for signal <medurezultat> created at line 6.
     Summary:
@@ -599,7 +599,7 @@ Synthesizing Unit <Prilagodeno_mnozenje>.
 Unit <Prilagodeno_mnozenje> synthesized.
 
 Synthesizing Unit <Neuron_2_OUT>.
-    Related source file is "C:\Users\josip\Desktop\PDS_projekt\VerilogMineDetectingANN\Neuron_2_OUT.v".
+    Related source file is "C:\Users\josip\Desktop\VerilogMineDetectingANN\Neuron_2_OUT.v".
         BROJ_POZITIVNIH_TEZINA = 2
         BROJ_NEGATIVNIH_TEZINA = 3
     Found 22-bit subtractor for signal <GND_14_o_GND_14_o_sub_15_OUT> created at line 76.
@@ -778,7 +778,7 @@ Optimizing unit <Sigmoid_LUT> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block Neural_net_controller, actual ratio is 17.
+Found area constraint ratio of 100 (+ 5) on block Neural_net_controller, actual ratio is 20.
 
 Final Macro Processing ...
 
@@ -807,22 +807,22 @@ Top Level Output File Name         : Neural_net_controller.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 22897
+# BELS                             : 25195
 #      GND                         : 1
-#      INV                         : 65
-#      LUT1                        : 711
-#      LUT2                        : 2097
-#      LUT3                        : 2420
-#      LUT4                        : 3178
-#      LUT5                        : 539
-#      LUT6                        : 34
-#      MUXCY                       : 6761
+#      INV                         : 17
+#      LUT1                        : 708
+#      LUT2                        : 2226
+#      LUT3                        : 2109
+#      LUT4                        : 4367
+#      LUT5                        : 957
+#      LUT6                        : 248
+#      MUXCY                       : 7080
 #      MUXF7                       : 2
 #      VCC                         : 1
-#      XORCY                       : 7088
-# IO Buffers                       : 38
+#      XORCY                       : 7479
+# IO Buffers                       : 6
 #      IBUF                        : 4
-#      OBUF                        : 34
+#      OBUF                        : 2
 # DSPs                             : 240
 #      DSP48E1                     : 240
 
@@ -833,19 +833,19 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice LUTs:                 9044  out of  63400    14%  
-    Number used as Logic:              9044  out of  63400    14%  
+ Number of Slice LUTs:                10632  out of  63400    16%  
+    Number used as Logic:             10632  out of  63400    16%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   9044
-   Number with an unused Flip Flop:    9044  out of   9044   100%  
-   Number with an unused LUT:             0  out of   9044     0%  
-   Number of fully used LUT-FF pairs:     0  out of   9044     0%  
+ Number of LUT Flip Flop pairs used:  10632
+   Number with an unused Flip Flop:   10632  out of  10632   100%  
+   Number with an unused LUT:             0  out of  10632     0%  
+   Number of fully used LUT-FF pairs:     0  out of  10632     0%  
    Number of unique control sets:         0
 
 IO Utilization: 
- Number of IOs:                          38
- Number of bonded IOBs:                  38  out of    210    18%  
+ Number of IOs:                           6
+ Number of bonded IOBs:                   6  out of    210     2%  
 
 Specific Feature Utilization:
  Number of DSP48E1s:                    240  out of    240   100%  
@@ -881,7 +881,7 @@ Speed Grade: -3
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: 30.263ns
+   Maximum combinational path delay: 26.360ns
 
 Timing Details:
 ---------------
@@ -889,30 +889,31 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 49459811347547709000 / 22
+  Total number of paths / destination ports: 50219769925724168 / 1
 -------------------------------------------------------------------------
-Delay:               30.263ns (Levels of Logic = 81)
+Delay:               26.360ns (Levels of Logic = 67)
   Source:            switch_3 (PAD)
-  Destination:       rezultat_2<9> (PAD)
+  Destination:       indikator_2 (PAD)
 
-  Data Path: switch_3 to rezultat_2<9>
+  Data Path: switch_3 to indikator_2
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O          1760   0.001   0.728  switch_3_IBUF (switch_3_IBUF)
-     LUT3:I0->O          241   0.097   0.418  Mram_test_primjer107_mand1 (Mram_test_primjer107_mand)
-     MUXCY:DI->O           1   0.337   0.000  neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd2_cy<3> (neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd2_cy<3>)
-     XORCY:CI->O           1   0.370   0.556  neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd2_xor<4> (neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd_62)
-     LUT4:I0->O            1   0.097   0.000  neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd6_lut<5> (neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd6_lut<5>)
-     MUXCY:S->O            1   0.353   0.000  neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd6_cy<5> (neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd6_cy<5>)
-     XORCY:CI->O           1   0.370   0.683  neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd6_xor<6> (neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd_76)
-     LUT5:I0->O            1   0.097   0.000  neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd7_lut<7> (neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd7_lut<7>)
-     MUXCY:S->O            1   0.353   0.000  neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd7_cy<7> (neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd7_cy<7>)
-     MUXCY:CI->O           1   0.023   0.000  neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd7_cy<8> (neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd7_cy<8>)
-     MUXCY:CI->O           1   0.023   0.000  neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd7_cy<9> (neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd7_cy<9>)
-     MUXCY:CI->O           1   0.023   0.000  neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd7_cy<10> (neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd7_cy<10>)
-     XORCY:CI->O           1   0.370   0.683  neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd7_xor<11> (neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd_1111)
-     LUT5:I0->O            1   0.097   0.000  neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd8_lut<11> (neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd8_lut<11>)
+     IBUF:I->O          3491   0.001   0.781  switch_3_IBUF (switch_3_IBUF)
+     LUT3:I0->O           13   0.097   0.739  Mram_test_primjer12931 (Mram_test_primjer129_bdd1)
+     LUT6:I1->O            1   0.097   0.000  neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd2_lut<3> (neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd2_lut<3>)
+     MUXCY:S->O            1   0.353   0.000  neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd2_cy<3> (neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd2_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd2_cy<4> (neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd2_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd2_cy<5> (neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd2_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd2_cy<6> (neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd2_cy<6>)
+     XORCY:CI->O           1   0.370   0.683  neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd2_xor<7> (neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd_92)
+     LUT5:I0->O            1   0.097   0.000  neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd6_lut<8> (neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd6_lut<8>)
+     MUXCY:S->O            1   0.353   0.000  neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd6_cy<8> (neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd6_cy<8>)
+     XORCY:CI->O           1   0.370   0.683  neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd6_xor<9> (neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd_106)
+     LUT5:I0->O            1   0.097   0.000  neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd7_lut<10> (neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd7_lut<10>)
+     MUXCY:S->O            1   0.353   0.000  neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd7_cy<10> (neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd7_cy<10>)
+     XORCY:CI->O           1   0.370   0.379  neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd7_xor<11> (neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd_1111)
+     LUT2:I0->O            1   0.097   0.000  neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd8_lut<11> (neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd8_lut<11>)
      MUXCY:S->O            1   0.353   0.000  neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd8_cy<11> (neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd8_cy<11>)
      XORCY:CI->O           1   0.370   0.295  neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd8_xor<12> (neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_12)
      LUT1:I0->O            1   0.097   0.000  neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd_cy<12>_rt (neuralna/treci_neuron_prvi_sloj/sklop_za_mnozenje5/Maddsub_medurezultat_Madd_cy<12>_rt)
@@ -924,7 +925,7 @@ Delay:               30.263ns (Levels of Logic = 81)
      LUT3:I2->O            1   0.097   0.295  ADDERTREE_INTERNAL_Madd14514 (ADDERTREE_INTERNAL_Madd14514)
      LUT4:I3->O            1   0.097   0.000  ADDERTREE_INTERNAL_Madd145_lut<0>15 (ADDERTREE_INTERNAL_Madd145_lut<0>15)
      MUXCY:S->O            1   0.353   0.000  ADDERTREE_INTERNAL_Madd145_cy<0>_14 (ADDERTREE_INTERNAL_Madd145_cy<0>15)
-     XORCY:CI->O           2   0.370   0.515  ADDERTREE_INTERNAL_Madd145_xor<0>_15 (ADDERTREE_INTERNAL_Madd_16145)
+     XORCY:CI->O           2   0.370   0.516  ADDERTREE_INTERNAL_Madd145_xor<0>_15 (ADDERTREE_INTERNAL_Madd_16145)
      LUT3:I0->O            1   0.097   0.295  ADDERTREE_INTERNAL_Madd15716 (ADDERTREE_INTERNAL_Madd15717)
      LUT4:I3->O            1   0.097   0.000  ADDERTREE_INTERNAL_Madd157_lut<0>17 (ADDERTREE_INTERNAL_Madd157_lut<0>17)
      MUXCY:S->O            1   0.353   0.000  ADDERTREE_INTERNAL_Madd157_cy<0>_16 (ADDERTREE_INTERNAL_Madd157_cy<0>17)
@@ -956,33 +957,18 @@ Delay:               30.263ns (Levels of Logic = 81)
      MUXCY:CI->O           1   0.023   0.000  neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/Madd_product_cy<12> (neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/Madd_product_cy<12>)
      MUXCY:CI->O           1   0.023   0.000  neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/Madd_product_cy<13> (neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/Madd_product_cy<13>)
      MUXCY:CI->O           1   0.023   0.000  neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/Madd_product_cy<14> (neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/Madd_product_cy<14>)
-     XORCY:CI->O           2   0.370   0.384  neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/Madd_product_xor<15> (neuralna/drugi_neuron_izlazni_sloj/produktp<2><15>)
+     XORCY:CI->O           2   0.370   0.383  neuralna/drugi_neuron_izlazni_sloj/sklop_za_mnozenje3/Madd_product_xor<15> (neuralna/drugi_neuron_izlazni_sloj/produktp<2><15>)
      LUT3:I1->O            1   0.097   0.295  neuralna/drugi_neuron_izlazni_sloj/Madd_n005015 (neuralna/drugi_neuron_izlazni_sloj/Madd_n005015)
      LUT4:I3->O            1   0.097   0.000  neuralna/drugi_neuron_izlazni_sloj/Madd_n0050_lut<0>16 (neuralna/drugi_neuron_izlazni_sloj/Madd_n0050_lut<0>16)
      MUXCY:S->O            1   0.353   0.000  neuralna/drugi_neuron_izlazni_sloj/Madd_n0050_cy<0>_15 (neuralna/drugi_neuron_izlazni_sloj/Madd_n0050_cy<0>16)
-     XORCY:CI->O           4   0.370   0.570  neuralna/drugi_neuron_izlazni_sloj/Madd_n0050_xor<0>_16 (neuralna/drugi_neuron_izlazni_sloj/n0050<17>)
+     XORCY:CI->O           2   0.370   0.561  neuralna/drugi_neuron_izlazni_sloj/Madd_n0050_xor<0>_16 (neuralna/drugi_neuron_izlazni_sloj/n0050<17>)
      LUT4:I0->O            0   0.097   0.000  neuralna/drugi_neuron_izlazni_sloj/Mcompar_BUS_0003_GND_14_o_LessThan_14_o_lutdi8 (neuralna/drugi_neuron_izlazni_sloj/Mcompar_BUS_0003_GND_14_o_LessThan_14_o_lutdi8)
-     MUXCY:DI->O           2   0.567   0.516  neuralna/drugi_neuron_izlazni_sloj/Mcompar_BUS_0003_GND_14_o_LessThan_14_o_cy<8> (neuralna/drugi_neuron_izlazni_sloj/Mcompar_BUS_0003_GND_14_o_LessThan_14_o_cy<8>)
-     LUT6:I3->O           23   0.097   0.609  neuralna/drugi_neuron_izlazni_sloj/Mcompar_BUS_0003_GND_14_o_LessThan_14_o_cy<9> (neuralna/drugi_neuron_izlazni_sloj/Mcompar_BUS_0003_GND_14_o_LessThan_14_o_cy<9>)
-     LUT3:I0->O            0   0.097   0.000  neuralna/drugi_neuron_izlazni_sloj/Mmux_Generalna_suma_A11 (neuralna/drugi_neuron_izlazni_sloj/Mmux_Generalna_suma_rs_A<0>)
-     MUXCY:DI->O           1   0.337   0.000  neuralna/drugi_neuron_izlazni_sloj/Mmux_Generalna_suma_rs_cy<0> (neuralna/drugi_neuron_izlazni_sloj/Mmux_Generalna_suma_rs_cy<0>)
-     MUXCY:CI->O           1   0.023   0.000  neuralna/drugi_neuron_izlazni_sloj/Mmux_Generalna_suma_rs_cy<1> (neuralna/drugi_neuron_izlazni_sloj/Mmux_Generalna_suma_rs_cy<1>)
-     MUXCY:CI->O           1   0.023   0.000  neuralna/drugi_neuron_izlazni_sloj/Mmux_Generalna_suma_rs_cy<2> (neuralna/drugi_neuron_izlazni_sloj/Mmux_Generalna_suma_rs_cy<2>)
-     MUXCY:CI->O           1   0.023   0.000  neuralna/drugi_neuron_izlazni_sloj/Mmux_Generalna_suma_rs_cy<3> (neuralna/drugi_neuron_izlazni_sloj/Mmux_Generalna_suma_rs_cy<3>)
-     MUXCY:CI->O           1   0.023   0.000  neuralna/drugi_neuron_izlazni_sloj/Mmux_Generalna_suma_rs_cy<4> (neuralna/drugi_neuron_izlazni_sloj/Mmux_Generalna_suma_rs_cy<4>)
-     MUXCY:CI->O           1   0.023   0.000  neuralna/drugi_neuron_izlazni_sloj/Mmux_Generalna_suma_rs_cy<5> (neuralna/drugi_neuron_izlazni_sloj/Mmux_Generalna_suma_rs_cy<5>)
-     MUXCY:CI->O           1   0.023   0.000  neuralna/drugi_neuron_izlazni_sloj/Mmux_Generalna_suma_rs_cy<6> (neuralna/drugi_neuron_izlazni_sloj/Mmux_Generalna_suma_rs_cy<6>)
-     MUXCY:CI->O           1   0.023   0.000  neuralna/drugi_neuron_izlazni_sloj/Mmux_Generalna_suma_rs_cy<7> (neuralna/drugi_neuron_izlazni_sloj/Mmux_Generalna_suma_rs_cy<7>)
-     XORCY:CI->O           1   0.370   0.683  neuralna/drugi_neuron_izlazni_sloj/Mmux_Generalna_suma_rs_xor<8> (neuralna/drugi_neuron_izlazni_sloj/Generalna_suma<8>)
-     LUT5:I0->O            1   0.097   0.379  neuralna/drugi_neuron_izlazni_sloj/Ananas/vjerojatnost<0>14 (neuralna/drugi_neuron_izlazni_sloj/Ananas/vjerojatnost<0>13)
-     LUT6:I4->O            1   0.097   0.295  neuralna/drugi_neuron_izlazni_sloj/Ananas/vjerojatnost<0>15 (neuralna/drugi_neuron_izlazni_sloj/Ananas/vjerojatnost<0>14)
-     LUT3:I2->O            1   0.097   0.511  neuralna/drugi_neuron_izlazni_sloj/Ananas/vjerojatnost<0>16_SW0 (N0)
-     LUT6:I3->O            3   0.097   0.305  neuralna/drugi_neuron_izlazni_sloj/Ananas/vjerojatnost<0>16 (neuralna/drugi_neuron_izlazni_sloj/Ananas/vjerojatnost<0>_bdd0)
-     LUT2:I1->O            3   0.097   0.289  neuralna/drugi_neuron_izlazni_sloj/Ananas/vjerojatnost<9>1 (rezultat_2_3_OBUF)
-     OBUF:I->O                 0.000          rezultat_2_9_OBUF (rezultat_2<9>)
+     MUXCY:DI->O           1   0.567   0.556  neuralna/drugi_neuron_izlazni_sloj/Mcompar_BUS_0003_GND_14_o_LessThan_14_o_cy<8> (neuralna/drugi_neuron_izlazni_sloj/Mcompar_BUS_0003_GND_14_o_LessThan_14_o_cy<8>)
+     LUT6:I2->O            1   0.097   0.279  neuralna/drugi_neuron_izlazni_sloj/Ananas/vjerojatnost<5>1 (indikator_2_OBUF)
+     OBUF:I->O                 0.000          indikator_2_OBUF (indikator_2)
     ----------------------------------------
-    Total                     30.263ns (15.886ns logic, 14.377ns route)
-                                       (52.5% logic, 47.5% route)
+    Total                     26.360ns (14.549ns logic, 11.811ns route)
+                                       (55.2% logic, 44.8% route)
 
 =========================================================================
 
@@ -992,12 +978,12 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 84.00 secs
-Total CPU time to Xst completion: 83.75 secs
+Total REAL time to Xst completion: 79.00 secs
+Total CPU time to Xst completion: 79.14 secs
  
 --> 
 
-Total memory usage is 4972088 kilobytes
+Total memory usage is 4991128 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    1 (   0 filtered)

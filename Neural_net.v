@@ -1,9 +1,8 @@
 module Neural_net (
     input[959:0] uzorak,
-    output reg indikator_1, indikator_2,
-    output reg[15:0] izlaz_1, izlaz_2
+    output reg indikator_1, indikator_2 
 );
-
+reg[15:0] izlaz_1, izlaz_2;
 wire [15:0] vjerojatnost[4:0];
 wire [79:0] output_FL;
 wire [15:0] vjerojatnost_2 [1:0];

@@ -24,7 +24,6 @@
 
 module Neural_net_test();
 reg [239:0] A [3:0];
-wire [15:0] out [1:0];
 wire LED_1,LED_2;
 initial $readmemh("data1.mem",A);
 wire [959:0]Mem;
@@ -33,9 +32,7 @@ assign Mem={A[0],A[1],A[2],A[3]};
 Neural_net uut(
     .uzorak(Mem),
 	 .indikator_1(LED_1),
-	 .indikator_2(LED_2),
-    .izlaz_1(out[0]),
-	 .izlaz_2(out[1])
+	 .indikator_2(LED_2)
 );
 initial begin
 #10;

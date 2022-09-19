@@ -20,7 +20,6 @@
 //////////////////////////////////////////////////////////////////////////////////
 module Neural_net_controller (
     input switch_1, switch_2, switch_3, switch_4,
-	 output [15:0] rezultat_1, rezultat_2,
     output indikator_1, indikator_2
 );
 
@@ -92,9 +91,7 @@ end
         Neural_net neuralna(
             .uzorak(test_primjer),
             .indikator_1(indikator_1),
-            .indikator_2(indikator_2),
-            .izlaz_1(rezultat_1),
-            .izlaz_2(rezultat_2)
+            .indikator_2(indikator_2)
         );
 
     
